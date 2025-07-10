@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanças Gramulha</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+</head>
+
+<body style="background-color: #f6f8ed;">
+
+
+
+    <header style="background-color: #7ea8be; height: 3em; display: flex; align-items: center; justify-content: right">
+
+
+        <img style="height: 90%; margin-right: 30px;">
+    </header>
+
+
+    <section>
+
+
+
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="auto cell" style=" margin-top: 10px;  color: #f6f0ED  ;display: flex; align-items: center; 
+                        justify-content: center">
+
+
+                </div>
+                <div class="small-12 medium-12  large-4 cell" style="background-color: white;
+                 border-radius: 5px; box-shadow: 10px 6px 10px  silver;  margin-top: 3em;">
+
+                    <div class="grid-x grid-padding-x">
+
+                        <div class="small-12 cell large-12">
+                            <br>
+                            <label>
+                                CPF
+                                <input type="text" name="txtUsuario" id="txtUsuario" value="333.888.777.09" readonly />
+                            </label>
+                        </div>
+
+                        <div class="small-12 cell large-12">
+                            <label>
+                                Nome
+                                <input type="text" name="txtUsuario" id="txtUsuario"
+                                    value="Luiz Henrique Ferreira da Silva" readonly />
+                            </label>
+                        </div>
+
+                        <div class="small-12 cell large-12">
+                            <label>
+                                Escolha a Unidade para Atendimento
+                                <select>
+                                    <option>Fácil São João</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="small-12 cell large-12">
+                            <label>
+                                Escolha o tipo de Atendimento
+                                <select>
+                                    <option>PMG</option>
+                                </select>
+                            </label>
+                        </div>
+
+
+
+                        <div class="small-12 medium-12  large-7 cell">
+                            <label>Data
+                                <input type="text" id="txtDataAtendimento" class="datepicker textoEntradas"></p>
+
+                            </label>
+                        </div>
+
+                        <div class="small-12 medium-12  large-5 cell">
+                            Hora
+                            <select>
+                                <option>04h00</option>
+                            </select>
+                        </div>
+
+
+                        <div class="small-12 cell large-12">
+                            <Br>
+
+                            <a class="button  " style="width: 100%; background-color: #28536b; color: white;">
+                                Concluir Agendamento
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto cell"
+                    style=" margin-top: 10px; color: #f6f0ED ;display: flex; align-items: center; justify-content: center">
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer style="background-color: #28536b; height: 2em; position:absolute; bottom: 0;  width: 100%;">
+
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+
+                <div class="small-12 medium-12  large-12 cell" style="color: white;">
+                    <br>
+                    <Center>
+
+                    </Center>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/what-input.js"></script>
+    <script src="assets/js/vendor/foundation.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $(".datepicker").datepicker();
+
+        });
+
+    </script>
+</body>
+
+</html>

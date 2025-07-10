@@ -1,0 +1,158 @@
+   <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+
+            <fieldset class="fieldset">
+              <legend>Pesquisa de Serviços</legend>
+
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <label>O que é</label>
+                  <p>
+                    É a solicitação de serviço de pavimentação com lajotas por sistema de mutirão, onde a municipalidade fornece o material e osmunícipes a mão de obra.
+                  </p>
+                </div>
+
+                <div class="large-12 cell">
+                  <label>Quando é necessário?</label>
+                  <p>
+                    É a solicitação de serviço de pavimentação com lajotas por sistema de mutirão, onde a municipalidade fornece o material e osmunícipes a mão de obra.
+                  </p>
+                </div>
+
+
+
+
+                <div class="large-6 cell">
+                  <label>Forma de Atendimento</label>
+                  <p>
+                    É a solicitação de serviço de pavimentação com lajotas por sistema de mutirão, onde a municipalidade fornece o material e osmunícipes a mão de obra.
+                  </p>
+                </div>
+
+                <div class="large-6 cell">
+                  <label>Prazo de Execução</label>
+                  <p>
+                    É a solicitação de serviço de pavimentação com lajotas por sistema de mutirão, onde a municipalidade fornece o material e osmunícipes a mão de obra.
+                  </p>
+                </div>
+
+                <div class="large-12 cell">
+                  <label>Legislação</label>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="80%">Descrição</th>
+                        <th width="20%">Ação</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Content Goes Here</td>
+                        <td>Abrir</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="large-12 cell">
+                  <label>Documentos Necessários</label>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="80%">Descrição</th>
+                        <th width="20%">Ação</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Content Goes Here</td>
+                        <td>Abrir</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="large-12 cell">
+                  <label>Taxas Cobradas</label>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="40%">Descrição</th>
+                        <th width="10%">Unidade</th>
+                        <th width="25%">UFG</th>
+                        <th width="25%">R$</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Content Goes Here</td>
+                        <td>Abrir</td>
+                        <td>Content Goes Here</td>
+                        <td>Abrir</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+            </fieldset>
+
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+        Array
+(
+    arraY[0] => Pavimentação com Lajotas em Ruas e Vielas por Sistema de Mutirão ( Operação Mãos à Obra )
+    [1] => Array
+        (
+            [idPlanilha] => 1
+            [pagina] => 2
+            [status] => Publicado
+            [formaAtendimento] => Presencial
+            [prazoExecucao] => Prazo de execução não encontrado
+            [tituloServico] => Pavimentação com Lajotas em Ruas e Vielas por Sistema de Mutirão ( Operação Mãos à Obra )
+            [sistemaLegado] => SEI - Sistema Eletrônico de Informações
+            [oQueE] => É a solicitação de serviço de pavimentação com lajotas por sistema de mutirão, onde a municipalidade fornece o material e osmunícipes a mão de obra.
+            [quandoNecessario] => Quando a rua ou viela não for pavimentada e o sistema utilizado for mutirão.
+            [unidadeExecutora] => Unidade Executora não encontrada
+            [tipo] => Decreto
+            [esfera] => Municipal
+            [numero] => 25345
+            [ano] => 08
+            [textoCompletoLei] => Decreto Municipal 25345/08
+            [caminhoLegislacao] => http://servicos.guarulhos.sp.gov.br/06_prefeitura/leis//decretos_2008/25345decr.pdf
+            [descricaoTaxa] => 
+            [unidade] => 
+            [ufg] => 
+            [valorReais] => 
+        )
