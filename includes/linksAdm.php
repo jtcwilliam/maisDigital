@@ -45,9 +45,9 @@ switch ($tipoPessoa) {
 
        
 
-        <a class="button fundoBotoesTopo" href="areaUnidadeAdm.php"> Calendário de Agendas </b></a>
+        <a class="button fundoBotoesTopo" href="habilitarServicos.php"> Habilitar Serviços </b></a>
         <a class="button fundoBotoesTopo" href="consultaUsuario.php">Alterar Dados Usuário</a>
-        <a class="button fundoBotoesTopo" href="baixarSenhas.php">Check in Atendimento</a>
+        
         <a class="button fundoBotoesTopo" href="logout.php">Sair</a>
 
 

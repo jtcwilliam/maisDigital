@@ -2,7 +2,7 @@
 
 
 
-class Servicos
+class Documentos
 {
 
 
@@ -12,10 +12,11 @@ class Servicos
     private $user;
     private $pwd;
     private $pdoConn;
+    private $idDocumento;
+    private $idServico;
+    private $status;
 
-    private $infoAtendente;
-    private $servicoHabilitado;
-    private $idCartaServico;
+
 
     function __construct()
     {
@@ -29,7 +30,7 @@ class Servicos
         $this->setPdoConn($objbanco);
     }
 
-    public function  trazerServicos($filtro = null)
+    public function  trazerDocumentos($filtro = null)
     {
         try {
 
@@ -38,11 +39,7 @@ class Servicos
 
 
 
-            $sql = "select  * from linkCartaServico ";
-
-            if ($filtro != null) {
-                $sql .= " where idUnidade= " . $filtro;
-            }
+            $sql = "select  * from documentos ";
 
 
             $stmt = $pdo->prepare($sql);
@@ -78,24 +75,22 @@ class Servicos
         }
     }
 
-    public function  habilitarServicos()
+    public function  inserirServicoDocumento()
     {
         try {
 
             $pdo = $this->getPdoConn();
 
-
             //
-            $stmt = $pdo->prepare(" UPDATE `linkCartaServico` SET `servicoHabilitado` = :habilitado, `infoAtendente` = :infoAtendente 
-           WHERE `idlinkCartaServico` = :idCarta");
+            $stmt = $pdo->prepare("INSERT INTO servicoDocumento(idServico,idDocumento, status) VALUES (:idservico,:idDocumento,:idstatus)");
 
             // $stmt = $pdo->prepare("  UPDATE  pessoas SET pwd =  :senha  WHERE idPessoas = :idPessoa   ");
 
-            $stmt->bindValue(':habilitado',  $this->getServicoHabilitado(), PDO::PARAM_STR);
+            $stmt->bindValue(':idservico',  $this->getIdServico(), PDO::PARAM_STR);
 
-            $stmt->bindValue(':infoAtendente',  $this->getInfoAtendente(), PDO::PARAM_STR);
+            $stmt->bindValue(':idDocumento',  $this->getIdDocumento(), PDO::PARAM_STR);
 
-            $stmt->bindValue(':idCarta', $this->getIdCartaServico(), PDO::PARAM_STR);
+            $stmt->bindValue(':idstatus', $this->getStatus(), PDO::PARAM_STR);
 
             if ($stmt->execute()) {
 
@@ -105,7 +100,6 @@ class Servicos
             echo 'Error: ' . $e->getMessage();
         }
     }
-
 
 
 
@@ -209,62 +203,63 @@ class Servicos
         return $this;
     }
 
+
     /**
-     * Get the value of infoAtendente
+     * Get the value of idServico
      */
-    public function getInfoAtendente()
+    public function getIdServico()
     {
-        return $this->infoAtendente;
+        return $this->idServico;
     }
 
     /**
-     * Set the value of infoAtendente
+     * Set the value of idServico
      *
      * @return  self
      */
-    public function setInfoAtendente($infoAtendente)
+    public function setIdServico($idServico)
     {
-        $this->infoAtendente = $infoAtendente;
+        $this->idServico = $idServico;
 
         return $this;
     }
 
     /**
-     * Get the value of servicoHabilitado
+     * Get the value of status
      */
-    public function getServicoHabilitado()
+    public function getStatus()
     {
-        return $this->servicoHabilitado;
+        return $this->status;
     }
 
     /**
-     * Set the value of servicoHabilitado
+     * Set the value of status
      *
      * @return  self
      */
-    public function setServicoHabilitado($servicoHabilitado)
+    public function setStatus($status)
     {
-        $this->servicoHabilitado = $servicoHabilitado;
+        $this->status = $status;
 
         return $this;
     }
 
     /**
-     * Get the value of idCartaServico
+     * Get the value of idDocumento
      */
-    public function getIdCartaServico()
+    public function getIdDocumento()
     {
-        return $this->idCartaServico;
+        return $this->idDocumento;
     }
 
     /**
-     * Set the value of idCartaServico
+     * Set the value of idDocumento
      *
      * @return  self
      */
-    public function setIdCartaServico($idCartaServico)
+    public function setIdDocumento($idDocumento)
     {
-        $this->idCartaServico = $idCartaServico;
+        $this->idDocumento = $idDocumento;
 
         return $this;
     }

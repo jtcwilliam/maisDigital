@@ -127,10 +127,10 @@ include_once 'includes/head.php'
 
                     switch (tipoPessoa) {
                         case 5:
-                            endereco = "areaSuperAdm.php";
+                            endereco = "managerMais.php";
                             break;
                         case 4:
-                            endereco = "areaUnidadeAdm.php";
+                            endereco = "managerMais.php";
                             break;
                         case 3:
                             endereco = "baixarSenhas.php";

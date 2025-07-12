@@ -13,7 +13,7 @@
                      <div class=" grid-x  grid-padding-x" style="padding-bottom: 10px;">
                          <div class="small-12 large-12 cell">
                              <script>
-                                 criaCombo();
+                                 criaCombo('comboServicos');
                              </script>
                              <select class="js-example-basic-single  responsive-combobox" id="comboServicos"
                                  onchange="$('a#linkHelpServico').attr('href', $('#comboServicos').val());
@@ -65,7 +65,7 @@
                          </label>
                      </div>
 
-                     
+
                      <div class="small-12 large-2 cell">
                          <label>Status da Solicitação
                              <input type="text" readonly style="width: 100%;" value="Abertura" />
@@ -122,4 +122,7 @@
  <script>
      $('#linkHelpServico').hide();
      $('#fieldSolicitacao').hide();
+
+
+     //    alert('s');
  </script>

@@ -40,8 +40,11 @@
 
 
     function criaCombo(containner) {
+
+        console.log(containner);
         var formData = {
-            
+            containner:containner
+
         };
         $.ajax({
                 type: 'POST',
@@ -52,10 +55,13 @@
             })
             .done(function(data) {
                 console.log(data);
-                $('#comboServicos').html(data);
-               
+                $(`#${containner}`).html(data);
+
             });
     }
+
+
+
 
 
 
