@@ -75,7 +75,7 @@
                 encode: true
             })
             .done(function(data) {
-                console.log(data);
+                
                  $(`#arquivosInseriveis`).html(data);
 
             });
