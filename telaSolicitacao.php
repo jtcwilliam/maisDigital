@@ -36,7 +36,7 @@
                  <div class="small-12 large-12 cell">
                      <br>
                      <center>
-                         <a class="button " target="_blank" style="font-weight: 300; width: 50%;" onclick="$('#iniciosSolicitacao').hide(); $('#fieldSolicitacao').show();">
+                         <a class="button " target="_blank" style="font-weight: 300; width: 50%;" onclick="$('#iniciosSolicitacao').hide(); $('#fieldSolicitacao').show();   $('#documentacao').show();  ">
                              Tudo Certo! Quero continuar!
                          </a>
                      </center>
@@ -81,19 +81,19 @@
 
                      <div class="small-12 large-3 cell">
                          <label>Inscrição Imobiliária
-                             <input type="text" style="width: 100%;" id=" " />
+                             <input type="text" style="width: 100%;" />
                          </label>
                      </div>
 
                      <div class="small-12 large-3 cell">
                          <label>Inscrição Mobiliária
-                             <input type="text" style="width: 100%;" id=" " />
+                             <input type="text" style="width: 100%;" />
                          </label>
                      </div>
 
                      <div class="small-12 large-3 cell">
                          <label>Cadastro
-                             <input type="text" style="width: 100%;" id=" " />
+                             <input type="text" style="width: 100%;">
                          </label>
                      </div>
 
@@ -103,6 +103,26 @@
                          </label>
 
                      </div>
+
+
+
+
+
+
+             </fieldset>
+
+
+
+             <fieldset class="fieldset" id="documentacao">
+                 <legend>
+                     <h4 id="">Documentação Necessária para Solicitação</h4>
+                 </legend>
+                 <div class=" grid-x grid-padding-x">
+                     <div class="small-12 large-12 cell">
+
+                         <div id="arquivosInseriveis"></div>
+                     </div>
+                 </div>
 
 
 
@@ -122,6 +142,9 @@
  <script>
      $('#linkHelpServico').hide();
      $('#fieldSolicitacao').hide();
+     $('#documentacao').hide();
+     criarCaixaArquivo(1288);
+
 
 
      //    alert('s');

@@ -88,8 +88,7 @@ class Servicos
             //
             $stmt = $pdo->prepare(" UPDATE `linkCartaServico` SET `servicoHabilitado` = :habilitado, `infoAtendente` = :infoAtendente 
            WHERE `idlinkCartaServico` = :idCarta");
-
-            // $stmt = $pdo->prepare("  UPDATE  pessoas SET pwd =  :senha  WHERE idPessoas = :idPessoa   ");
+ 
 
             $stmt->bindValue(':habilitado',  $this->getServicoHabilitado(), PDO::PARAM_STR);
 

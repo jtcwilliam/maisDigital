@@ -40,11 +40,9 @@
 
 
     function criaCombo(containner) {
-
         console.log(containner);
         var formData = {
-            containner:containner
-
+            containner: containner
         };
         $.ajax({
                 type: 'POST',
@@ -54,13 +52,34 @@
                 encode: true
             })
             .done(function(data) {
-                console.log(data);
+                //  console.log(data);
                 $(`#${containner}`).html(data);
 
             });
     }
 
 
+
+
+    function criarCaixaArquivo(idServico) {
+        
+        var formData = {
+            idServico,
+            criaCampoArquivo: 1
+        };
+        $.ajax({
+                type: 'POST',
+                url: 'ajax/arquivosController.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+            })
+            .done(function(data) {
+                console.log(data);
+                 $(`#arquivosInseriveis`).html(data);
+
+            });
+    }
 
 
 

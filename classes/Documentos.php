@@ -75,6 +75,59 @@ class Documentos
         }
     }
 
+
+    public function  trazerDocumentoArquivo($filtro)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = "select * from servicoDocumento dc inner join linkCartaServico sv on sv.idlinkCartaServico = dc.idServico  inner join documentos dcm 
+            on dcm.idDoc =  idDocumento
+            where idservico =".$filtro;
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
+
+
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+
+
+
+
     public function  inserirServicoDocumento()
     {
         try {

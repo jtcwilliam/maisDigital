@@ -40,7 +40,7 @@ if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicosDocumen
 
 
 
-    echo  '<option    >     </option>';
+    echo  '<option>     </option>';
 
 
     foreach ($dados as $key => $value) {
@@ -52,7 +52,7 @@ if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicosDocumen
         }
 
 
-        echo '<option value=' . $value['idlinkCartaServico'] . '  >' . $descricao . '</option>';
+        echo '<option value=' . $value['idlinkCartaServico'] . '>' . $descricao . '</option>';
     }
 }
 

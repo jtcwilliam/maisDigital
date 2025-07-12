@@ -88,75 +88,75 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                 <fieldset class="fieldset">
                     <legend> <label>Habilitar serviços para o atendimento</label></legend>
 
-                    <form action="ajax/habilitaServicosController.php" method="POST" enctype="multipart/form-data"">
+                    <form action="ajax/habilitaServicosController.php" method="POST" enctype="multipart/form-data">
                         <div class=" grid-x grid-padding-x">
-                        <div class="small-12 large-12 cell">
+                            <div class="small-12 large-12 cell">
 
 
-                            <label for="qtdeMesas">Escolha Serviço a ser habilitado<br>
+                                <label for="qtdeMesas">Escolha Serviço a ser habilitado<br>
 
-                                <select class="js-example-basic-single  responsive-combobox" id="comboServicosDocumentos"  name="comboServicos"
-                                    style="width: 100%;">
+                                    <select class="js-example-basic-single  responsive-combobox" id="comboServicosDocumentos" name="comboServicos"
+                                        style="width: 100%;">
 
-                                </select>
-                            </label>
+                                    </select>
+                                </label>
 
-                            <Br>
+                                <Br>
+                            </div>
+
+                            <div class="small-12 large-12 cell">
+
+
+                                <label for="qtdeMesas">Insira as informações para o atendimento<br>
+                                    <textarea rows="12" style="width: 100%;" name="infoAtendimentos">Digite aqui as informações para o Atendente</textarea>
+                                </label>
+
+                            </div>
+
+                            <div class="small-12 large-12 cell">
+
+
+                                <label for="qtdeMesas">Escolha qual(is) documento(s) compõe este serviço<br>
+
+                                    <select class="js-example-basic-single  responsive-combobox" multiple="multiple" id="comboDocumentos" name="comboDocumentos[]"
+                                        style="width: 100%;">
+
+                                    </select>
+                                </label>
+
+                                <Br>
+                            </div>
+
+
+
                         </div>
 
-                        <div class="small-12 large-12 cell">
+                        <div class="grid-x grid-padding-x">
 
 
-                            <label for="qtdeMesas">Insira as informações para o atendimento<br>
-                                <textarea rows="12" style="width: 100%;"  name="infoAtendimentos">Digite aqui as informações para o Atendente</textarea>
-                            </label>
+
+
+                            <div class="small-12 large-3 cell">
+                                <label for="qtdeMesas">&nbsp;<br>
+                                    <input type="submit" class="button fundoBotoesTopo "
+                                        style="height: 3em; width: 100%; color: white; font-weight: bold;" id="enviarHorarios" />
+                                </label>
+                            </div>
 
                         </div>
+                    </form>
+                </fieldset>
 
-                        <div class="small-12 large-12 cell">
 
 
-                            <label for="qtdeMesas">Escolha qual(is) documento(s) compõe este serviço<br>
 
-                                <select class="js-example-basic-single  responsive-combobox" multiple="multiple" id="comboDocumentos" name="comboDocumentos[]"
-                                    style="width: 100%;">
 
-                                </select>
-                            </label>
-
-                            <Br>
-                        </div>
 
 
 
             </div>
-
-            <div class="grid-x grid-padding-x">
-
-
-
-
-                <div class="small-12 large-3 cell">
-                    <label for="qtdeMesas">&nbsp;<br>
-                        <input type="submit" class="button fundoBotoesTopo "
-                            style="height: 3em; width: 100%; color: white; font-weight: bold;" id="enviarHorarios" />
-                    </label>
-                </div>
-
-            </div>
-            </form>
-            </fieldset>
-
-
-
-
-
-
-
 
         </div>
-
-    </div>
 
     </div>
 
@@ -168,6 +168,18 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
     <script>
         //parte para preencher os horários
 
+        <?php
+
+        if (isset($_GET['servico'])) { ?>
+
+            alert('Serviço Habilitado com Sucesso!');
+
+        <?php
+        }
+
+
+        ?>
+        
         criaCombo('comboServicosDocumentos');
 
         criaCombo('comboDocumentos');
