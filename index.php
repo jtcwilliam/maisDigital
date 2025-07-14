@@ -1,3 +1,15 @@
+<?php
+
+if (session_start()) {
+    /*echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
+    */
+}
+
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
@@ -5,7 +17,7 @@
 
 
 include_once 'includes/head.php';
-session_start();
+
 
 
 ?>
@@ -13,6 +25,25 @@ session_start();
 <body style="background-image: url('imgs/fundoSistema.png') ;         background-size: cover ">
 
     <!-- modais de informação sucesso cadastrado -->
+
+
+    <!-- upload de arquivos -->
+    <div class="   small reveal" id="carregandoArquivos" data-reveal style="background-color:rgb(216, 216, 219);">
+        <div style="display: grid;  justify-content: center; align-content: center;  padding-top: 0px;">
+            <center style="color: black;">
+                <h4>
+
+                    Aguarde um Pouco enquanto esse arquivo está sendo gravado!
+
+
+
+                </h4>
+
+            </center>
+        </div>
+
+    </div>
+
 
 
     <!-- duvida sobre Servicos -->
@@ -663,6 +694,7 @@ session_start();
 
                     } else {
 
+                        location.reload();
 
 
                         $('#containerCadastro').fadeOut(200).promise().done(function() {

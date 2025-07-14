@@ -11,8 +11,10 @@ $objConsultar = new Pessoa();
 
 $cpf = md5($_POST['cpf']);
 
+$cpfNatural = $_POST['cpf'];
+
 $senha = md5($_POST['senha']);
 
-$dadoUsuario = $objConsultar->logarAgendamento($cpf, $senha);
+$dadoUsuario = $objConsultar->logarAgendamento($cpf, $senha, $cpfNatural);
 
 echo json_encode(array('retornoCondicao' => $dadoUsuario));

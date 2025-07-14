@@ -16,6 +16,7 @@
     $(function() {
         $(document).ready(function() {
             $('.js-example-basic-single').select2();
+            $('.mensagemB').hide();
         });
         $(".datepicker").datepicker({
             maxDate: 30,
@@ -39,8 +40,57 @@
     });
 
 
+    // funçõa para upload
+    function subirArquivo(arquivo, id, mensagem, texto, botaoRetorno, caixa) {
+
+        var formData = new FormData();
+        var file = $(`#${id}`)[0].files[0];
+
+        if (file) {
+            $('#carregandoArquivos').foundation('open');
+            formData.append('file', file);
+
+            $.ajax({
+                url: 'ajax/arquivosController.php', // Replace with your server endpoint
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    console.log(response);
+
+                    $(`#${id}`).attr('disabled', 'disabled');
+                    $(`#${id}`).hide();
+                    $(`#${caixa}`).hide();
+                    $(`#${mensagem}`).show();
+                    $(`#${mensagem}`).html('O arquivo <i>"' + texto + '"</i> foi carregado com Sucesso');
+
+
+
+                    $(`#${botaoRetorno}`).css("background-color", "rgb(58, 219, 118)");
+                    $(`#${botaoRetorno}`).css("color", "rgba(0, 0, 0, 1)");
+
+                    $(`#${botaoRetorno}`).attr('disabled', 'disabled');
+
+                    $('#carregandoArquivos').foundation('close');
+
+
+                    // console.log(response);
+                    // alert('File uploaded successfully!');
+                },
+                error: function(error) {
+                    alert('Error uploading file.');
+                }
+            });
+        } else {
+            alert('Escolha o arquivo. Isto é obrigatório!');
+
+            return false;
+        }
+    }
+
     function criaCombo(containner) {
-        console.log(containner);
+        $(`#${containner}`).html('<option>Aguarde</option>');
         var formData = {
             containner: containner
         };
@@ -53,6 +103,10 @@
             })
             .done(function(data) {
                 //  console.log(data);
+
+
+                $(`#${containner}`).html('<option>Aguarde</option>');
+
                 $(`#${containner}`).html(data);
 
             });
@@ -62,7 +116,7 @@
 
 
     function criarCaixaArquivo(idServico) {
-        
+
         var formData = {
             idServico,
             criaCampoArquivo: 1
@@ -75,8 +129,8 @@
                 encode: true
             })
             .done(function(data) {
-                
-                 $(`#arquivosInseriveis`).html(data);
+
+                $(`#arquivosInseriveis`).html(data);
 
             });
     }

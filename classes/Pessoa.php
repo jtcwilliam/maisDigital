@@ -57,7 +57,7 @@ class Pessoa
 
 
 
-    public function  logarAgendamento($cpf, $senha)
+    public function  logarAgendamento($cpf, $senha, $cpfNatural)
     {
         try {
 
@@ -79,9 +79,12 @@ class Pessoa
                 $dados[] = $value;
                 $retorno['condicao'] = true;
                 $retorno['dados'] = $dados;
+
                 $i++;
                 session_start();
                 $_SESSION['usuariosLogados'] = $dados;
+                $_SESSION['usuariosLogados']['cpfDoUsuario'] = $cpfNatural;
+
                 $_SESSION['condicao'] = true;
             }
 
