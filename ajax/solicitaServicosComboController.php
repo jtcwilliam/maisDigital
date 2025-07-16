@@ -25,7 +25,7 @@ if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicos') {
         }
 
 
-        echo '<option value=' . $value['linkCarta'] . '  >' . $descricao . '</option>';
+        echo '<option    codigo='    . $value['idlinkCartaServico'] . '     value=' . $value['linkCarta'] . '  >' . $descricao . '</option>';
     }
 }
 
@@ -63,6 +63,32 @@ if (isset($_POST['containner']) && $_POST['containner'] == 'comboDocumentos') {
     $objservico = new Documentos();
 
     $dados = $objservico->trazerDocumentos();
+
+
+
+    echo  '<option    >     </option>';
+
+
+    foreach ($dados as $key => $value) {
+
+        $descricao = $value['descricaoDoc'];
+        if (strlen($descricao) > 200) {
+
+            $descricao = substr($descricao, 0, 200) . '...';
+        }
+
+
+        echo '<option value=' . $value['idDoc'] . '  >' . $descricao . '</option>';
+    }
+}
+
+
+if (isset($_POST['containner']) && $_POST['containner'] == 'comboTipoInscricao') {
+    include_once '../classes/Documentos.php';
+
+    $objservico = new Documentos();
+
+    $dados = $objservico->trazerDocumentos(' where status = 9 ');
 
 
 

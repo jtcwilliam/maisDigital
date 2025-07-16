@@ -41,6 +41,10 @@ class Documentos
 
             $sql = "select  * from documentos ";
 
+            if($filtro != null){
+                $sql.= $filtro;
+            }
+
 
             $stmt = $pdo->prepare($sql);
 

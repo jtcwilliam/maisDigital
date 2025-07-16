@@ -41,14 +41,18 @@
 
 
     // funçõa para upload
-    function subirArquivo(arquivo, id, mensagem, texto, botaoRetorno, caixa) {
+    function subirArquivo(arquivo, id, mensagem, texto, botaoRetorno, caixa, idQuantidadeArquivoDoServico) {
 
         var formData = new FormData();
         var file = $(`#${id}`)[0].files[0];
+        var idSolicitacao = $('#idSolicitacaoHidden').val()
 
         if (file) {
             $('#carregandoArquivos').foundation('open');
             formData.append('file', file);
+            formData.append('idSolicitacao', idSolicitacao);
+            formData.append('nomeArquivo', texto);
+            formData.append('idQuantidadeArquivoDoServico', idQuantidadeArquivoDoServico);
 
             $.ajax({
                 url: 'ajax/arquivosController.php', // Replace with your server endpoint
@@ -56,6 +60,7 @@
                 data: formData,
                 processData: false,
                 contentType: false,
+                dataType: 'html',
                 success: function(response) {
                     console.log(response);
 
@@ -90,6 +95,32 @@
     }
 
     function criaCombo(containner) {
+        $(`#${containner}`).html('<option>Aguarde</option>');
+        var formData = {
+            containner: containner
+
+        };
+        $.ajax({
+                type: 'POST',
+                url: 'ajax/solicitaServicosComboController.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+            })
+            .done(function(data) {
+                //  console.log(data);
+
+
+                $(`#${containner}`).html('<option>Aguarde</option>');
+
+                $(`#${containner}`).html(data);
+
+            });
+    }
+
+
+
+    function criaComboEspecializado(containner) {
         $(`#${containner}`).html('<option>Aguarde</option>');
         var formData = {
             containner: containner

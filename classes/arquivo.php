@@ -14,6 +14,10 @@ class Arquivo
     private $arquivo;
 
     private $pdoConn;
+    private $nomeArquivo;
+    private $tipoArquivo;
+    private $idSolicitacao;
+    private $statusArquivo;
 
     function __construct()
     {
@@ -27,15 +31,15 @@ class Arquivo
         $this->setPdoConn($objbanco);
     }
 
- 
-     public function  gerarArquivo()
+
+    public function  gerarArquivo()
     {
         try {
-            
+
             $pdo = $this->getPdoConn();
 
             $stmt = $pdo->prepare(" select arquivo from arquivos where idarquivo = 13 ");
-                                        
+
 
             $stmt->execute();
 
@@ -45,12 +49,34 @@ class Arquivo
 
 
             return $datasDisponiveis;
-             
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
     }
- 
+
+
+    public function  consultarQuantidadeArquivo($idSolicitacao)
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare(" select arquivo from arquivos where idSolicitacao =" . $idSolicitacao);
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 
     public function  inserirArquivos()
     {
@@ -61,14 +87,22 @@ class Arquivo
             //$pdo = new PDO("mysql:host='" . $host . "' ;dbname='" . $db . "', '" . $user, $password);
             //    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $arquivo =   $this->getArquivo();           
+            $arquivo =   $this->getArquivo();
+            $arquivoTipo = $this->getTipoArquivo();
+            $nomeArquivo = $this->getNomeArquivo();
+            $idSolicitacao = $this->getIdSolicitacao();
+            $statusArquivo = $this->getStatusArquivo();
 
-            $stmt = $pdo->prepare("  INSERT INTO  arquivos ( arquivo   )   values (?) ");
 
-            $stmt->bindParam(1,  $arquivo);
 
-           // $stmt->bind_param('ss',  $this->getArquivo(), 1);
-          
+            $stmt = $pdo->prepare("  INSERT INTO  arquivos ( arquivo, tipoArquivo, nomeArquivo, idSolicitacao, statusArquivo   )   values (?,?,?,?,?) ");
+
+            $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(2,  $arquivoTipo, PDO::PARAM_LOB);
+            $stmt->bindParam(3,  $nomeArquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(4,  $idSolicitacao, PDO::PARAM_LOB);
+            $stmt->bindParam(5,  $idSolicitacao, PDO::PARAM_LOB);
+
 
             if ($stmt->execute()) {
                 return true;
@@ -182,7 +216,7 @@ class Arquivo
 
     /**
      * Get the value of arquivo
-     */ 
+     */
     public function getArquivo()
     {
         return $this->arquivo;
@@ -192,10 +226,90 @@ class Arquivo
      * Set the value of arquivo
      *
      * @return  self
-     */ 
+     */
     public function setArquivo($arquivo)
     {
         $this->arquivo = $arquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nomeArquivo
+     */
+    public function getNomeArquivo()
+    {
+        return $this->nomeArquivo;
+    }
+
+    /**
+     * Set the value of nomeArquivo
+     *
+     * @return  self
+     */
+    public function setNomeArquivo($nomeArquivo)
+    {
+        $this->nomeArquivo = $nomeArquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of tipoArquivo
+     */
+    public function getTipoArquivo()
+    {
+        return $this->tipoArquivo;
+    }
+
+    /**
+     * Set the value of tipoArquivo
+     *
+     * @return  self
+     */
+    public function setTipoArquivo($tipoArquivo)
+    {
+        $this->tipoArquivo = $tipoArquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idSolicitacao
+     */
+    public function getIdSolicitacao()
+    {
+        return $this->idSolicitacao;
+    }
+
+    /**
+     * Set the value of idSolicitacao
+     *
+     * @return  self
+     */
+    public function setIdSolicitacao($idSolicitacao)
+    {
+        $this->idSolicitacao = $idSolicitacao;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of statusArquivo
+     */
+    public function getStatusArquivo()
+    {
+        return $this->statusArquivo;
+    }
+
+    /**
+     * Set the value of statusArquivo
+     *
+     * @return  self
+     */
+    public function setStatusArquivo($statusArquivo)
+    {
+        $this->statusArquivo = $statusArquivo;
 
         return $this;
     }

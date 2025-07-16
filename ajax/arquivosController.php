@@ -9,9 +9,18 @@ $objDOcumento = new Documentos();
 
 if (isset($_POST['criaCampoArquivo'])) {
 
-
-
     $criarCaixaArquivo =  $objDOcumento->trazerDocumentoArquivo($_POST['idServico']);
+
+    $quantidadeArquivos =  count($criarCaixaArquivo);
+
+    //verificar quantos arquivos tem anexos a este serviço;
+    echo   "   <input type='text' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
+
+
+
+
+
+
 
 
 
@@ -23,13 +32,13 @@ if (isset($_POST['criaCampoArquivo'])) {
 
         <div class=" grid-x  grid-padding-x " style="width: 100%;   ">
             <div class=" small-12 large-12 cell">
-                <p class="button success mensagemB "  style="width: 100%;" id="mensagem<?= $i ?>"> Arquivo Carregado com Sucesso</p>
+                <p class="button success mensagemB " style="width: 100%;" id="mensagem<?= $i ?>"> Arquivo Carregado com Sucesso</p>
             </div>
 
         </div>
 
 
-        <div class=" grid-x  grid-padding-x " style="width: 100%;   "  id="caixa<?= $i ?>" >
+        <div class=" grid-x  grid-padding-x " style="width: 100%;   " id="caixa<?= $i ?>">
 
 
 
@@ -42,7 +51,7 @@ if (isset($_POST['criaCampoArquivo'])) {
             <div class="small-12 large-9 cell">
                 <label>
                     <button type="button" id="uploadButton<?= $i ?>" class="button " style="width: 100%; text-align: justify;  height: 3em;"
-                        onclick="subirArquivo('file<?= $i ?>','fileInput<?= $i ?>', 'mensagem<?= $i ?>',   ' <?= $value['descricaoDoc'] ?> ', 'uploadButton<?= $i ?>', 'caixa<?= $i ?>')  ">
+                        onclick="subirArquivo('file<?= $i ?>','fileInput<?= $i ?>', 'mensagem<?= $i ?>',   ' <?= $value['descricaoDoc'] ?> ', 'uploadButton<?= $i ?>', 'caixa<?= $i ?>', $('#idQuantidadeArquivoDoServico').val() )  ">
                         Clique para carregar o <b><i>"<?= $value['descricaoDoc'] ?>"</i></b>
                     </button>
                 </label>
@@ -75,22 +84,47 @@ if (isset($_POST['criaCampoArquivo'])) {
 
 
 
+$tipo = $_FILES['file']['type'];
 
+$nomeArquivo = $_POST['nomeArquivo'];
 
+include_once '../classes/Sanitizar.php';
 
+$nomeArquivoSize =  $_POST['nomeArquivo'];
+if (strlen($nomeArquivoSize) >= 180) {
+    $nomeArquivo = substr($nomeArquivoSize, 0, 180);
+}
 
-
+$nomeArquivo = $_POST['idSolicitacao'] . $nomeArquivo;
 
 
 
 $file = file_get_contents($_FILES['file']['tmp_name']);
 
+$arquivoTipo =  $_FILES['file']['type'];
 
 
+$objArquivo->setTipoArquivo($arquivoTipo);
 
+$objArquivo->setNomeArquivo($nomeArquivo);
 
+$objArquivo->setIdSolicitacao($_POST['idSolicitacao']);
+
+$objArquivo->setStatusArquivo('1');
 
 $objArquivo->setArquivo($file);
 
 
-$objArquivo->inserirArquivos();
+if ($objArquivo->inserirArquivos()) {
+
+
+    $objQtdeArquivo = $objArquivo->consultarQuantidadeArquivo($_POST['idSolicitacao']);
+
+    echo $_POST['idQuantidadeArquivoDoServico'] . '<br>';
+
+    echo count($objQtdeArquivo);
+
+
+
+    echo json_encode(array('retorno' => true));
+}
