@@ -54,6 +54,28 @@ class Arquivo
         }
     }
 
+      public function  solicitarArquivoRelatorio($idSolicitacao)
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare(" select * from arquivos where idSolicitacao =" . $idSolicitacao);
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 
     public function  consultarQuantidadeArquivo($idSolicitacao)
     {
@@ -103,7 +125,7 @@ class Arquivo
             $stmt->bindParam(2,  $arquivoTipo, PDO::PARAM_LOB);
             $stmt->bindParam(3,  $nomeArquivo, PDO::PARAM_LOB);
             $stmt->bindParam(4,  $idSolicitacao, PDO::PARAM_LOB);
-            $stmt->bindParam(5,  $idSolicitacao, PDO::PARAM_LOB);
+            $stmt->bindParam(5,  $statusArquivo, PDO::PARAM_LOB);
 
 
             if ($stmt->execute()) {
