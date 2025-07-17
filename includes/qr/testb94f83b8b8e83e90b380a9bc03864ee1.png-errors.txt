@@ -1,0 +1,840 @@
+2025-07-01 17:57:06: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 17:58:35: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 17:58:40: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 17:58:47: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 17:59:00: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:02:03: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:02:19: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:02:59: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:03:13: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:07:09: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:07:10: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+2025-07-01 18:13:41: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>/Applications/MAMP/htdocs/projetoQrCode/qrCode/qrencode.php</b> on line <b>144</b><br />

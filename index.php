@@ -493,7 +493,7 @@ include_once 'includes/head.php';
 
     </div>
 
-    <div class="grid-x grid-padding-x" id="containerCadastraSolicitacao" style="display: none ;height: 90vh; background-color:rgb(216, 216, 219); margin: 30px; ">
+    <div class="grid-x grid-padding-x" id="containerCadastraSolicitacao" style="display: none ;height: 120vh; background-color:rgb(216, 216, 219); margin: 30px; ">
 
 
 

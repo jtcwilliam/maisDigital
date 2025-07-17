@@ -21,6 +21,8 @@ class Solicitacao
     private $solicitacante;
     private $tipoDocumento;
     private $protocolo;
+    private $arquivo;
+    private $solicitacao;
 
 
     function __construct()
@@ -55,7 +57,50 @@ class Solicitacao
 
             //$user = $stmt->fetchAll();
 
+            $retorno = array();
 
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+    public function  pesquisarAssinatura($idSolicitacao)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = "select  * from solicitacao where  idSolicitacao='" . $idSolicitacao . "'  and statusSolicitacao=10 ";
+
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
 
             $retorno = array();
 
@@ -76,6 +121,38 @@ class Solicitacao
 
 
             return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+    public function  inserirAssinaturaSolicitacao()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+
+            $arquivo =   $this->getArquivo();
+            $idSolicitacao = $this->getSolicitacao();
+
+
+
+
+
+            $stmt = $pdo->prepare("  UPDATE solicitacao set assinaturaSolicitacao=?, statusSolicitacao=10   where idSolicitacao=?");
+
+
+            //corrigir isto aqui
+            $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(2,  $idSolicitacao, PDO::PARAM_INT);
+
+
+
+            if ($stmt->execute()) {
+                return true;
+            }
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
@@ -380,6 +457,46 @@ class Solicitacao
     public function setProtocolo($protocolo)
     {
         $this->protocolo = $protocolo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of arquivo
+     */
+    public function getArquivo()
+    {
+        return $this->arquivo;
+    }
+
+    /**
+     * Set the value of arquivo
+     *
+     * @return  self
+     */
+    public function setArquivo($arquivo)
+    {
+        $this->arquivo = $arquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of solicitacao
+     */
+    public function getSolicitacao()
+    {
+        return $this->solicitacao;
+    }
+
+    /**
+     * Set the value of solicitacao
+     *
+     * @return  self
+     */
+    public function setSolicitacao($solicitacao)
+    {
+        $this->solicitacao = $solicitacao;
 
         return $this;
     }

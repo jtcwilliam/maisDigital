@@ -97,6 +97,8 @@ class Arquivo
 
             $stmt = $pdo->prepare("  INSERT INTO  arquivos ( arquivo, tipoArquivo, nomeArquivo, idSolicitacao, statusArquivo   )   values (?,?,?,?,?) ");
 
+
+            //corrigir isto aqui
             $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
             $stmt->bindParam(2,  $arquivoTipo, PDO::PARAM_LOB);
             $stmt->bindParam(3,  $nomeArquivo, PDO::PARAM_LOB);

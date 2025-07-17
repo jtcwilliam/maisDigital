@@ -60,7 +60,7 @@
                 data: formData,
                 processData: false,
                 contentType: false,
-                dataType: 'html',
+                dataType: 'json',
                 success: function(response) {
                     console.log(response);
 
@@ -78,6 +78,10 @@
                     $(`#${botaoRetorno}`).attr('disabled', 'disabled');
 
                     $('#carregandoArquivos').foundation('close');
+
+                    if(response.carregarBotaoFinaliza == true){
+                            $('#arquivosAnexosSucesso').show();
+                    }
 
 
                     // console.log(response);

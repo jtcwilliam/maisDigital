@@ -14,7 +14,7 @@ if (isset($_POST['criaCampoArquivo'])) {
     $quantidadeArquivos =  count($criarCaixaArquivo);
 
     //verificar quantos arquivos tem anexos a este serviço;
-    echo   "   <input type='text' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
+    echo   "   <input type='hidden' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
 
 
 
@@ -31,8 +31,8 @@ if (isset($_POST['criaCampoArquivo'])) {
 
 
         <div class=" grid-x  grid-padding-x " style="width: 100%;   ">
-            <div class=" small-12 large-12 cell">
-                <p class="button success mensagemB " style="width: 100%;" id="mensagem<?= $i ?>"> Arquivo Carregado com Sucesso</p>
+            <div class=" small-12 large-12 cell"> 
+                <p class="button   mensagemB " style="width: 100%; background-color: rgb(23, 121, 186);  " id="mensagem<?= $i ?>"> Arquivo Carregado com Sucesso</p>
             </div>
 
         </div>
@@ -115,16 +115,27 @@ $objArquivo->setStatusArquivo('1');
 $objArquivo->setArquivo($file);
 
 
+$carregarFinalizaUP = 1;
 if ($objArquivo->inserirArquivos()) {
 
 
     $objQtdeArquivo = $objArquivo->consultarQuantidadeArquivo($_POST['idSolicitacao']);
+    $objArquivo = count($objQtdeArquivo);
 
-    echo $_POST['idQuantidadeArquivoDoServico'] . '<br>';
-
-    echo count($objQtdeArquivo);
-
+    $qtdeArquivosServico =  $_POST['idQuantidadeArquivoDoServico'];
 
 
-    echo json_encode(array('retorno' => true));
+
+
+    if ($objArquivo == $qtdeArquivosServico) {
+        $carregarFinalizaUP = true;
+    }else{
+        $carregarFinalizaUP = false;
+    }
+
+
+
+
+
+    echo json_encode(array('retorno' => true, 'carregarBotaoFinaliza' => $carregarFinalizaUP));
 }

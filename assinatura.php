@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,86 +34,93 @@
       max-width: 100%;
     }
   </style>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"> 
-    
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+
   </script>
 </head>
-<body>
 
-  <h2>Assinatura Digital (Traço Contínuo)</h2>
+<body style="background-color:rgb(216, 216, 219);">
+  <script>
+    alert('Vire o celular para a posição paisagem (ou seja, deite o celular)');
+  </script>
 
-  <canvas id="signatureCanvas" width="600" height="300"></canvas>
+  <p><b>Assinatura Mais Digital</b></p>
 
-  <div class="buttons">
-    <button onclick="clearCanvas()">Limpar</button>
-    <button onclick="saveSignature()">Salvar</button>
+
+  <div id="infoSucesso">
+    <center>
+      <h1>Nós Colhemos sua assinatura com sucesso! <br> Volte para o mais digital no seu computador!</h1>
+    </center>
+
   </div>
 
-  <h3>Assinatura Salva:</h3>
 
- 
-        <img id="savedImage" alt="Assinatura aparecerá aqui"/>
+  <div id="colherAssinatura">
+
+    <canvas id="signatureCanvas" width="700" height="150" style="background-color: white;"></canvas>
+
+    <input type="text" id="idSolicitacao" style="display: none;" value="<?= $_GET['idSolicitacao'] ?>" />
+
+    <div class="buttons">
+      <button style="background-color: rgb(30, 32, 37); border-radius: 10px; ; color: white;" onclick="clearCanvas()">Limpar</button>
+      <button style="background-color: rgb(30, 32, 37);  border-radius: 10px; color: white;" onclick="saveSignature()">Salvar</button>
+
+    </div>
 
 
- 
-    <button type="submit" onclick="inserirUsuario()" >Enviar Imagem</button>
- 
+    <img id="savedImage" style="display: none;" alt="Assinatura aparecerá aqui" />
 
-       
+
+
+    <button type="submit" style="display: none;" onclick="inserirAssinaturaDoUsuario()">Enviar Imagem</button>
+
+  </div>
+
 
   <script>
+    $(document).ready(function() {
+      $('#infoSucesso').hide();
+    })
 
- 
+    function pegarAss() {
 
-function pegarAss(){
-
-    var assinatura = $("#savedImage").attr("src");
-
-    
-
-
-    console.log(assinatura);
-    
-    
-}
+      var assinatura = $("#savedImage").attr("src");
 
 
-  function inserirUsuario() {
-
-    var assinatura = $("#savedImage").attr("src");
-
-    
 
 
-    //console.log(assinatura);
-    
-     
-
-            
-                var formData = {
-                assinatura
-                };
-                var condicao;
-                $.ajax({
-                        type: 'POST',
-                        url: 'ajax/salvaAssinaturaController.php',
-                        data: formData,
-                        dataType: 'html',
-                        encode: true
-                    })
-                    .done(function(data) {
-
-                        console.log(data);
-
-                       
-
-                    });
-         
-            event.preventDefault();
-        }
+    }
 
 
- 
+    function inserirAssinaturaDoUsuario() {
+
+      var assinatura = $("#savedImage").attr("src");
+
+      var formData = {
+        assinatura,
+        idSolicitacao: $('#idSolicitacao').val()
+      };
+      var condicao;
+      $.ajax({
+          type: 'POST',
+          url: 'ajax/salvaAssinaturaController.php',
+          data: formData,
+          dataType: 'json',
+          encode: true
+        })
+        .done(function(data) {
+          if (data.retorno == true) {
+            $('#colherAssinatura').hide();
+            $('#infoSucesso').show();
+
+          }
+        });
+
+      event.preventDefault();
+    }
+
+
+
 
     const canvas = document.getElementById('signatureCanvas');
     const ctx = canvas.getContext('2d');
@@ -139,7 +147,10 @@ function pegarAss(){
     }
 
     function startDrawing(e) {
-      const { x, y } = getCoords(e);
+      const {
+        x,
+        y
+      } = getCoords(e);
       drawing = true;
       ctx.beginPath();
       ctx.moveTo(x, y);
@@ -148,7 +159,10 @@ function pegarAss(){
 
     function draw(e) {
       if (!drawing) return;
-      const { x, y } = getCoords(e);
+      const {
+        x,
+        y
+      } = getCoords(e);
       ctx.lineTo(x, y);
       ctx.stroke();
       e.preventDefault();
@@ -176,9 +190,17 @@ function pegarAss(){
 
     function saveSignature() {
       const imageData = canvas.toDataURL('image/png');
-      
+
       document.getElementById('savedImage').src = imageData;
+
+
+      inserirAssinaturaDoUsuario();
+
+
+
+
     }
   </script>
 </body>
+
 </html>

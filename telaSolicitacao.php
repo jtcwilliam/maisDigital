@@ -152,8 +152,8 @@
             </fieldset>
 
             <fieldset class="fieldset" id="documentacao">
-                <input type="text" id='idSolicitacaoHidden' />
-                
+                <input type="hidden" id='idSolicitacaoHidden' />
+
                 <legend>
                     <h4 id="">Documentação Necessária para Solicitação</h4>
                 </legend>
@@ -163,6 +163,60 @@
 
                     </div>
                 </div>
+
+                <div class=" grid-x grid-padding-x" id="arquivosAnexosSucesso">
+                    <div class="small-12 large-12 cell" style="width: 100%; padding-top: 30px;">
+                        <center><a class="button success " onclick=" $('#envioAssinatura').show();   verificarAssinatura($('#idSolicitacaoHidden').val())  ;qrCodeAssinatura('https:\/\/wmhtecnologia.com.br\/maisDigital\/assinatura.php?idSolicitacao='+$('#idSolicitacaoHidden').val()); $('#documentacao').hide(); $('#fieldSolicitacao').hide(); $('#escolha').css('color', 'rgba(8, 124, 4, 0.66)' ); $('#complemento').css('color', 'rgba(8, 124, 4, 0.66)' ); $('#docsEstagio').css('color', 'rgba(8, 124, 4, 0.66)' );" style="  width: 100%; font-size: 1.3em; border-radius: 10px; ">Todos os arquivos foram anexados com sucesso! Clique aqui para assinatura da Solicitação</a></center>
+
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="fieldset" id="envioAssinatura">
+
+
+                <legend>
+                    <h4 id="">Deite o Celular e escaneie o QRCode abaixo. Você irá assinar esta solicitação</h4>
+                </legend>
+                <br>
+
+                <div class=" grid-x grid-padding-x">
+                    <div class="small-12 large-12 cell" style="width: 100%;  ">
+
+
+
+                        <div id="img" style="padding-top: 30px;"></div>
+                        <br>
+                        <center> <a class="button" onclick="finalizarSolicitacao($('#idSolicitacaoHidden').val())" style="width: 60%;">Se você ja assinou, clique aqui!</a></center>
+
+
+
+
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+            <fieldset class="fieldset" id="finalizacaoSolicitacao">
+
+
+                <legend>
+                    <h4 id="">Aqui está sua solicitacao</h4>
+                </legend>
+                <br>
+
+                <div class=" grid-x grid-padding-x">
+                    <div class="small-12 large-12 cell" style="width: 100%;  " id="solicitacaoFinalizada">
+
+
+
+
+                    </div>
+                </div>
+
+
             </fieldset>
 
 
@@ -236,8 +290,16 @@
     $('#fieldSolicitacao').hide();
     $('#documentacao').hide();
     $('.mensagemB').hide();
+    $('#arquivosAnexosSucesso').hide();
+    $('#envioAssinatura').hide();
+    $('#finalizacaoSolicitacao').hide();
 
 
+
+
+
+
+    //aqui que traz os arquivos pertinentes a esse servico;
     criarCaixaArquivo(1288);
 
 
@@ -291,7 +353,7 @@
             })
             .done(function(data) {
 
-                console.log(data);
+                
 
 
                 if (data.retorno == true) {
@@ -304,6 +366,92 @@
                     $('#docsEstagio').css('color', 'rgba(0, 0, 0, 1)');
 
                 }
+            });
+    }
+
+    function qrCodeAssinatura(link) {
+
+        var formData = {
+            link
+
+        };
+        $.ajax({
+                type: 'POST',
+                url: 'qrcode.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+            })
+            .done(function(data) {
+
+                console.log(data);
+
+
+                $('#img').html(data);
+
+
+            });
+    }
+
+
+    function verificarAssinatura(idSolicitacao) {
+
+        var formData = {
+            idSolicitacao,
+            verificarAssinatura: '1'
+
+        };
+        $.ajax({
+                type: 'POST',
+                url: 'ajax/salvaAssinaturaController.php',
+                data: formData,
+                dataType: 'json',
+                encode: true
+            })
+            .done(function(data) {
+
+                if (data.retorno == 10) {
+
+                    $('#envioAssinatura').hide();
+
+
+
+                }
+
+            });
+    }
+
+
+    function finalizarSolicitacao(idSolicitacao) {
+
+        var formData = {
+            idSolicitacao,
+
+            finalizaSolicitacao: '1'
+
+        };
+        $.ajax({
+                type: 'POST',
+                url: 'ajax/salvaAssinaturaController.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+            })
+            .done(function(data) {
+
+          
+
+                $('#envioAssinatura').hide();
+
+                $('#finalizacaoSolicitacao').show();
+
+                $('#solicitacaoFinalizada').html(data);
+
+
+
+
+
+
             });
     }
 </script>
