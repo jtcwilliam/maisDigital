@@ -11,9 +11,11 @@ if (isset($_POST['inserirSolicitacao'])) {
     $objSolicitacao->setAssuntoSolicitacao($_POST['assuntoSolicitacao']);
     $objSolicitacao->setDescricaoSolicitacao($_POST['descricao']);
     $objSolicitacao->setDocumentoPublico($_POST['documentoPublico']);
+    $objSolicitacao->setDocumentoSolicitante($_POST['cpfSolicitante']);
+
     $objSolicitacao->setDataSolicitacao(date('Y-m-d H:i:s'));
     $objSolicitacao->setStatusSolicitacao($_POST['statusSolicitacao']);
-    $objSolicitacao->setSolicitacante($_POST['idUsuario']);
+    $objSolicitacao->setsolicitante($_POST['idUsuario']);
     $objSolicitacao->setTipoDocumento($_POST['comboTipoInscricao']);
     $objSolicitacao->setProtocolo($randomico);
 

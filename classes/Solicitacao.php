@@ -18,11 +18,12 @@ class Solicitacao
     private $documentoPublico;
     private $dataSolicitacao;
     private $statusSolicitacao;
-    private $solicitacante;
+    private $solicitante;
     private $tipoDocumento;
     private $protocolo;
     private $arquivo;
     private $solicitacao;
+    private $documentoSolicitante;
 
 
     function __construct()
@@ -47,6 +48,54 @@ class Solicitacao
 
 
             $sql = "select  * from solicitacao where  protocolo='" . $protocolo . "'";
+
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+    public function  consultarSolicitacaoRelatorio($idSolicitacao)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = " select lc.descricaoCarta,  sl.descricaoSolicitacao  ,lc.nomeSecretaria, sl.solicitante, sl.tipoDocumento, sl.documentoPublico, dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao
+                    from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao
+                    inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante 
+                    where idsolicitacao = " . $idSolicitacao;
 
 
 
@@ -166,8 +215,8 @@ class Solicitacao
 
 
             //
-            $stmt = $pdo->prepare(" INSERT INTO solicitacao (assuntoSolicitacao,descricaoSolicitacao, documentoPublico, dataSolicitacao,statusSolicitacao, solicitacante,tipoDocumento, protocolo)
-             VALUES ( :assuntoSolicitacao,:descricaoSolicitacao, :documentoPublico, :dataSolicitacao, :statusSolicitacao, :solicitacante, :tipoDocumento, :protocolo)");
+            $stmt = $pdo->prepare(" INSERT INTO solicitacao (assuntoSolicitacao,descricaoSolicitacao, documentoPublico, dataSolicitacao,statusSolicitacao, solicitante,tipoDocumento, protocolo, docSolicitacaoPessoal)
+             VALUES ( :assuntoSolicitacao,:descricaoSolicitacao, :documentoPublico, :dataSolicitacao, :statusSolicitacao, :solicitante, :tipoDocumento, :protocolo, :docSolicitacaoPessoal)");
 
 
             $stmt->bindValue(':assuntoSolicitacao',  $this->getAssuntoSolicitacao(), PDO::PARAM_STR);
@@ -180,11 +229,14 @@ class Solicitacao
 
             $stmt->bindValue(':statusSolicitacao',  $this->getStatusSolicitacao(), PDO::PARAM_STR);
 
-            $stmt->bindValue(':solicitacante',  $this->getSolicitacante(), PDO::PARAM_STR);
+            $stmt->bindValue(':solicitante',  $this->getsolicitante(), PDO::PARAM_STR);
 
             $stmt->bindValue(':tipoDocumento',  $this->getTipoDocumento(), PDO::PARAM_STR);
 
             $stmt->bindValue(':protocolo',  $this->getProtocolo(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':docSolicitacaoPessoal',  $this->getDocumentoSolicitante(), PDO::PARAM_STR);
+
 
 
             if ($stmt->execute()) {
@@ -402,21 +454,21 @@ class Solicitacao
     }
 
     /**
-     * Get the value of solicitacante
+     * Get the value of solicitante
      */
-    public function getSolicitacante()
+    public function getsolicitante()
     {
-        return $this->solicitacante;
+        return $this->solicitante;
     }
 
     /**
-     * Set the value of solicitacante
+     * Set the value of solicitante
      *
      * @return  self
      */
-    public function setSolicitacante($solicitacante)
+    public function setsolicitante($solicitante)
     {
-        $this->solicitacante = $solicitacante;
+        $this->solicitante = $solicitante;
 
         return $this;
     }
@@ -497,6 +549,26 @@ class Solicitacao
     public function setSolicitacao($solicitacao)
     {
         $this->solicitacao = $solicitacao;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of documentoSolicitante
+     */
+    public function getDocumentoSolicitante()
+    {
+        return $this->documentoSolicitante;
+    }
+
+    /**
+     * Set the value of documentoSolicitante
+     *
+     * @return  self
+     */
+    public function setDocumentoSolicitante($documentoSolicitante)
+    {
+        $this->documentoSolicitante = $documentoSolicitante;
 
         return $this;
     }

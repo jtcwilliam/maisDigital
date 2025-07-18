@@ -31,4 +31,43 @@ class Fpdi extends FpdfTpl
      * @string
      */
     const VERSION = '2.6.3';
+
+    
+    function WriteHTML($html)
+    {
+        // Remove quebras de linha desnecessárias
+        $html = str_replace("\n", ' ', $html);
+        // Divide por tags
+        $a = preg_split('/<(.*)>/U', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+        foreach ($a as $i => $e) {
+            if ($i % 2 == 0) {
+                // Texto
+                $this->Write(5, $e);
+            } else {
+                // Tag
+                if ($e[0] == '/')
+                    $this->CloseTag(strtoupper(substr($e, 1)));
+                else {
+                    // Extrair atributos
+                    $a2 = explode(' ', $e);
+                    $tag = strtoupper(array_shift($a2));
+                    $this->OpenTag($tag);
+                }
+            }
+        }
+    }
+
+    function OpenTag($tag)
+    {
+        if ($tag == 'B')
+            $this->SetFont('', 'B');
+        if ($tag == 'BR')
+            $this->Ln(5);
+    }
+
+    function CloseTag($tag)
+    {
+        if ($tag == 'B')
+            $this->SetFont('', '');
+    }
 }

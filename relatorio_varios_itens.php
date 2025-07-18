@@ -11,18 +11,12 @@ $objArquivo = new Arquivo();
 
 $arquivos = $objArquivo->solicitarArquivoRelatorio(144);
 
-// Criar PDF com FPDF + FPDI
-$pdf = new Fpdi();
 
 
-$pdf->AddPage();
-$pdf->SetFont('Arial', '', 12);
 
-// Texto com negrito e normal + alinhamento justificado
-$pdf->SetX(10);
-$pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
-$pdf->SetXY(10, $pdf->GetY());
-$pdf->WriteHTML(utf8_decode('Este é um texto <B>em negrito</B> e aqui volta ao normal. Outro <B>negrito</B> no meio.'));
+
+
+
 
 
 
@@ -41,11 +35,12 @@ $tempPdf = 'temp_pdf.pdf';
 file_put_contents($tempImg, $imgData);
 file_put_contents($tempPdf, $pdfData);
 
+// Criar PDF com FPDF + FPDI
+$pdf = new Fpdi();
 
 // Adicionar página para a imagem
 $pdf->AddPage();
 $pdf->Image($tempImg, 10, 10, 100); // Ajuste posição/tamanho
-
 
 
 

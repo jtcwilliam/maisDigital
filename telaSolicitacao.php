@@ -1,5 +1,9 @@
 <?php
 
+/*echo '<pre>';
+print_r($_SESSION['usuariosLogados']['cpfDoUsuario']);
+echo '</pre>';
+*/
 
 
 ?>
@@ -342,7 +346,8 @@
             comboTipoInscricao: $('#comboTipoInscricao').val(),
             idUsuario: solicitante,
             statusSolicitacao: 9,
-            inserirSolicitacao: 0
+            inserirSolicitacao: 0,
+            cpfSolicitante: $('#cpfSolicitante').val()
         };
         $.ajax({
                 type: 'POST',
@@ -353,7 +358,7 @@
             })
             .done(function(data) {
 
-                
+
 
 
                 if (data.retorno == true) {
@@ -439,7 +444,7 @@
             })
             .done(function(data) {
 
-          
+
 
                 $('#envioAssinatura').hide();
 
