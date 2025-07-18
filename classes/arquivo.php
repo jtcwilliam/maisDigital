@@ -54,13 +54,27 @@ class Arquivo
         }
     }
 
-      public function  solicitarArquivoRelatorio($idSolicitacao)
+    public function  solicitarArquivoRelatorio($idSolicitacao)
     {
         try {
 
+
+
             $pdo = $this->getPdoConn();
 
-            $stmt = $pdo->prepare(" select * from arquivos where idSolicitacao =" . $idSolicitacao);
+            $stmt = $pdo->prepare("  select lc.descricaoCarta,  sl.descricaoSolicitacao  ,lc.nomeSecretaria, sl.solicitante,
+             sl.tipoDocumento, sl.documentoPublico,  nomeArquivo, tipoArquivo, ar.arquivo, 
+ dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao, 
+  date_format(dataSolicitacao, '%d ' ) as 'dias', 
+
+  date_format(dataSolicitacao, '%M' ) as 'mes', 
+
+  date_format(dataSolicitacao, ' de %Y ' ) as 'ano', sl.assinaturaSolicitacao 
+ 
+ 
+  from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao 
+ inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante 
+ INNER join arquivos ar on ar.idSolicitacao  = sl.idsolicitacao where sl.idsolicitacao =" . $idSolicitacao);
 
 
             $stmt->execute();

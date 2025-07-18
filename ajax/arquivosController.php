@@ -95,7 +95,7 @@ if (strlen($nomeArquivoSize) >= 180) {
     $nomeArquivo = substr($nomeArquivoSize, 0, 180);
 }
 
-$nomeArquivo = $_POST['idSolicitacao'] . $nomeArquivo;
+$nomeArquivo =  $nomeArquivo;
 
 
 
