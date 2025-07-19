@@ -25,6 +25,12 @@ class Solicitacao
     private $solicitacao;
     private $documentoSolicitante;
 
+    private $cepSolicitacao;
+    private $logradouroSol;
+    private $numeroSol;
+    private $complemento;
+    private $bairro;
+
 
     function __construct()
     {
@@ -215,8 +221,10 @@ class Solicitacao
 
 
             //
-            $stmt = $pdo->prepare(" INSERT INTO solicitacao (assuntoSolicitacao,descricaoSolicitacao, documentoPublico, dataSolicitacao,statusSolicitacao, solicitante,tipoDocumento, protocolo, docSolicitacaoPessoal)
-             VALUES ( :assuntoSolicitacao,:descricaoSolicitacao, :documentoPublico, :dataSolicitacao, :statusSolicitacao, :solicitante, :tipoDocumento, :protocolo, :docSolicitacaoPessoal)");
+            $stmt = $pdo->prepare(" INSERT INTO solicitacao (assuntoSolicitacao,descricaoSolicitacao, documentoPublico, dataSolicitacao,statusSolicitacao,
+             solicitante,tipoDocumento, protocolo, docSolicitacaoPessoal,  cepSolicitacao   ,  logradouroSol    ,  numeroSol, complemento, bairro    )
+             VALUES ( :assuntoSolicitacao,:descricaoSolicitacao, :documentoPublico, :dataSolicitacao,
+              :statusSolicitacao, :solicitante, :tipoDocumento, :protocolo, :docSolicitacaoPessoal,  :cepSolicitacao,   :logradouroSol, :numeroSol,  :complemento,   :bairro   )");
 
 
             $stmt->bindValue(':assuntoSolicitacao',  $this->getAssuntoSolicitacao(), PDO::PARAM_STR);
@@ -236,6 +244,21 @@ class Solicitacao
             $stmt->bindValue(':protocolo',  $this->getProtocolo(), PDO::PARAM_STR);
 
             $stmt->bindValue(':docSolicitacaoPessoal',  $this->getDocumentoSolicitante(), PDO::PARAM_STR);
+
+
+            //            //
+            $stmt->bindValue(':cepSolicitacao',  $this->getCepSolicitacao(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':logradouroSol',  $this->getLogradouroSol(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':numeroSol',  $this->getNumeroSol(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':complemento',  $this->getComplemento(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':bairro',  $this->getBairro(), PDO::PARAM_STR);
+            //            \\
+
+
 
 
 
@@ -569,6 +592,106 @@ class Solicitacao
     public function setDocumentoSolicitante($documentoSolicitante)
     {
         $this->documentoSolicitante = $documentoSolicitante;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of cepSolicitacao
+     */
+    public function getCepSolicitacao()
+    {
+        return $this->cepSolicitacao;
+    }
+
+    /**
+     * Set the value of cepSolicitacao
+     *
+     * @return  self
+     */
+    public function setCepSolicitacao($cepSolicitacao)
+    {
+        $this->cepSolicitacao = $cepSolicitacao;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of logradouroSol
+     */
+    public function getLogradouroSol()
+    {
+        return $this->logradouroSol;
+    }
+
+    /**
+     * Set the value of logradouroSol
+     *
+     * @return  self
+     */
+    public function setLogradouroSol($logradouroSol)
+    {
+        $this->logradouroSol = $logradouroSol;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of numeroSol
+     */
+    public function getNumeroSol()
+    {
+        return $this->numeroSol;
+    }
+
+    /**
+     * Set the value of numeroSol
+     *
+     * @return  self
+     */
+    public function setNumeroSol($numeroSol)
+    {
+        $this->numeroSol = $numeroSol;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of complemento
+     */
+    public function getComplemento()
+    {
+        return $this->complemento;
+    }
+
+    /**
+     * Set the value of complemento
+     *
+     * @return  self
+     */
+    public function setComplemento($complemento)
+    {
+        $this->complemento = $complemento;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of bairro
+     */
+    public function getBairro()
+    {
+        return $this->bairro;
+    }
+
+    /**
+     * Set the value of bairro
+     *
+     * @return  self
+     */
+    public function setBairro($bairro)
+    {
+        $this->bairro = $bairro;
 
         return $this;
     }

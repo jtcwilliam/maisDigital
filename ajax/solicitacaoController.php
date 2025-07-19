@@ -20,6 +20,19 @@ if (isset($_POST['inserirSolicitacao'])) {
     $objSolicitacao->setProtocolo($randomico);
 
 
+
+    $objSolicitacao->setCepSolicitacao($_POST['txtCEP']);
+
+    $objSolicitacao->setLogradouroSol($_POST['txtRua']);
+
+    $objSolicitacao->setNumeroSol($_POST['txtNUmero']);
+
+    $objSolicitacao->setComplemento($_POST['txtComplemento']);
+
+    $objSolicitacao->setBairro($_POST['txtBairro']);
+    //            \\
+
+
     if ($objSolicitacao->gravarSolicitacao() == true) {
         $protocolo =  $objSolicitacao->trazerSolicitacao($randomico);
         echo json_encode(array('retorno' => true, 'idSolicitacaoHidden' => $protocolo[0]['idsolicitacao']));

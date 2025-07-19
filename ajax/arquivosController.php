@@ -119,13 +119,12 @@ $carregarFinalizaUP = 1;
 if ($objArquivo->inserirArquivos()) {
 
 
+
+    /*
     $objQtdeArquivo = $objArquivo->consultarQuantidadeArquivo($_POST['idSolicitacao']);
     $objArquivo = count($objQtdeArquivo);
 
     $qtdeArquivosServico =  $_POST['idQuantidadeArquivoDoServico'];
-
-
-
 
     if ($objArquivo == $qtdeArquivosServico) {
         $carregarFinalizaUP = true;
@@ -133,9 +132,14 @@ if ($objArquivo->inserirArquivos()) {
         $carregarFinalizaUP = false;
     }
 
-
-
-
-
     echo json_encode(array('retorno' => true, 'carregarBotaoFinaliza' => $carregarFinalizaUP));
+
+    */
+
+    echo json_encode(array('retorno' => true));
+
+
+
+
+
 }

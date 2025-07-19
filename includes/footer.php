@@ -79,9 +79,9 @@
 
                     $('#carregandoArquivos').foundation('close');
 
-                    if(response.carregarBotaoFinaliza == true){
+                    
                             $('#arquivosAnexosSucesso').show();
-                    }
+                    
 
 
                     // console.log(response);
@@ -151,6 +151,8 @@
 
 
     function criarCaixaArquivo(idServico) {
+
+        
 
         var formData = {
             idServico,

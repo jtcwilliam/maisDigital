@@ -69,6 +69,9 @@ function chamaCEP(cep) {
                     $("#txtBairro").val(dados.bairro);
                     $("#txtCidade").val(dados.localidade);
                     $("#txtEstado").val(dados.uf);
+
+ 
+
                     // $("#ibge").val(dados.ibge);
                 } //end if.
                 else {

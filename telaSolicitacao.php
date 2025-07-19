@@ -30,7 +30,7 @@ echo '</pre>';
                                 onchange="$('a#linkHelpServico').attr('href', $('#comboServicos').val());
                                  $('#modalDuvidasCartas').foundation('open'); 
                                  
-
+                                    criarCaixaArquivo($('#comboServicos').find(':selected').attr('codigo'));
 
                                  $('#codigoSolicitacao').html( $('#comboServicos option:selected').text()) ;
                                  $('#assuntoSolicitacao').val( $('#comboServicos option:selected').text()) ;" name="state" style="width: 100%;">
@@ -100,6 +100,58 @@ echo '</pre>';
                         </label>
 
                     </div>
+
+                    <div class="small-12 large-1 cell">
+                        <label>CEP:
+                            <input type="text" id="txtCEP" onchange="chamaCEP($('#txtCEP').val())" style="width: 100%;" />
+                        </label>
+
+                    </div>
+
+                    <div class="small-12 large-3 cell">
+                        <label>Logradouro
+                            <input type="text" id="txtRua" style="width: 100%;" />
+                        </label>
+
+                    </div>
+                    <div class="small-12 large-1 cell">
+                        <label>Nº
+                            <input type="text" id="txtNUmero" style="width: 100%;" />
+                        </label>
+
+                    </div>
+                    <div class="small-12 large-2 cell">
+                        <label>Complemento
+                            <input type="text" id="txtComplemento" style="width: 100%;" />
+                        </label>
+
+                    </div>
+
+                    <div class="small-12 large-2 cell">
+                        <label>Bairro
+                            <input type="text" id="txtBairro" style="width: 100%;" />
+                        </label>
+
+                    </div>
+
+                    <div class="small-12 large-2 cell">
+                        <label>Cidade / Estado
+                            <input type="text" id="txtCidade" style="width: 100%;" />
+                        </label>
+
+                    </div>
+
+
+                    <div class="small-12 large-1 cell">
+                        <label>UF
+                            <input type="text" id="txtEstado" style="width: 100%;" />
+                        </label>
+
+                    </div>
+
+
+
+
 
 
 
@@ -297,6 +349,7 @@ echo '</pre>';
     $('#arquivosAnexosSucesso').hide();
     $('#envioAssinatura').hide();
     $('#finalizacaoSolicitacao').hide();
+    $('#txtCEP').mask("00000-000");
 
 
 
@@ -304,7 +357,7 @@ echo '</pre>';
 
 
     //aqui que traz os arquivos pertinentes a esse servico;
-    criarCaixaArquivo(1288);
+    //criarCaixaArquivo($('#comboServicos').find(':selected').attr('codigo'));
 
 
 
@@ -347,7 +400,18 @@ echo '</pre>';
             idUsuario: solicitante,
             statusSolicitacao: 9,
             inserirSolicitacao: 0,
-            cpfSolicitante: $('#cpfSolicitante').val()
+            cpfSolicitante: $('#cpfSolicitante').val(),
+            txtCEP: $('#txtCEP').val(),
+            txtRua: $('#txtRua').val(),
+            txtNUmero: $('#txtNUmero').val(),
+            txtComplemento: $('#txtComplemento').val(),
+            txtBairro: $('#txtBairro').val()
+
+
+
+
+
+
         };
         $.ajax({
                 type: 'POST',

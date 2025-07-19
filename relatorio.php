@@ -11,7 +11,7 @@ use setasign\Fpdi\Fpdi;
 
 $objArquivo = new Arquivo();
 
-$arquivos = $objArquivo->solicitarArquivoRelatorio(153);
+$arquivos = $objArquivo->solicitarArquivoRelatorio(165);
 
 $mes = $arquivos[0]['mes'];
 
@@ -31,7 +31,7 @@ $pdf->SetFont('Arial', 'B', 30);
 $pdf->Text(65, 31, utf8_decode('Requerimento Padrão'));
 
 $pdf->SetFont('Arial', '', 13);
-$pdf->Text(10, 40, utf8_decode('Ao Excelentíssimo Senhor Prefeito do Município de Guarulhos '));
+$pdf->Text(10, 43, utf8_decode('Ao Excelentíssimo Senhor Prefeito do Município de Guarulhos '));
 $pdf->Cell(190, 35, '', 0, 1, 'C');
 
 
@@ -44,28 +44,13 @@ $pdf->SetX(10);
 $pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
 $pdf->SetXY(10, 53, $pdf->GetY());
 $pdf->WriteHTML(utf8_decode("<b>Nome do Solicitante:</b> " . $arquivos[0]['nomePessoa'] . "<br><br><b>CPF ou CNPJ:</b> " . $arquivos[0]['docSolicitacaoPessoal'] . " 
-<b>Email:</b> " . $arquivos[0]['emailUsuario'] . " <br> <br><b>Endereço: </b> Rua Italo Brasileiro, 31<br> <br><br>"));
+<br><br><b>Email:</b> " . $arquivos[0]['emailUsuario'] . " <br> <br><b>Endereço: </b>" . $arquivos[0]['logradouroSol'] . 
+", " . $arquivos[0]['numeroSol'] . ". " . $arquivos[0]['complemento'] . "  " . $arquivos[0]['bairro'] . " <br><br><b>" . $arquivos[0]['descricaoDoc'] . ":</b> " . $arquivos[0]['documentoPublico']. "<b><br><br>Venho, respeitosamente, solicitar</b><br><i><center>" 
+. $arquivos[0]['descricaoCarta'] . "<center></i>.<br><br><b>Complemento da Solicitação</b>:  <br>" . $arquivos[0]['descricaoSolicitacao'] . " <br>  "));
 
-$pdf->SetFont('Arial', 'B', 13);
-$pdf->Cell(190, 8, utf8_decode('Inscrição Municipal'), 1, 1, 'C');
+ 
 
-// Texto com negrito e normal + alinhamento justificado
-$pdf->SetFont('Arial', '', 13);
-$pdf->SetX(10);
-$pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
-$pdf->SetXY(10, 98, $pdf->GetY());
-$pdf->WriteHTML(utf8_decode("<b>" . $arquivos[0]['descricaoDoc'] . ":</b> " . $arquivos[0]['documentoPublico']));
-
-
-$pdf->SetFont('Arial', '', 13);
-$pdf->SetX(10);
-$pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
-$pdf->SetXY(10, 110, $pdf->GetY());
-$pdf->WriteHTML(utf8_decode("<b>Venho, respeitosamente, solicitar</b><br><i><center>" . $arquivos[0]['descricaoCarta'] . "<center></i>.<br><br><b>Complemento da Solicitação</b>:  <br>" . $arquivos[0]['descricaoSolicitacao'] . " <br>  "));
-$pdf->SetFont('Arial', 'B', 13);
-$pdf->Cell(190, 8, '', 0, 0, 'C');
-
-$pdf->SetXY(10, 170, $pdf->GetY());
+$pdf->SetXY(10, 230, $pdf->GetY());
 
 $pdf->SetFont('Arial', 'B', 13);
 $pdf->Cell(190, 8, $dataDaSol, 0, 0, 'j');
@@ -83,17 +68,19 @@ $data = base64_decode($base64);
 $file = 'temp_image.png';
 file_put_contents($file, $data);
 
-$pdf->SetXY(10, 220, $pdf->GetY());
+
 
 // Adicionar imagem no PDF
-$pdf->Image($file, 60, 200, 90, 0, 'PNG');
+$pdf->Image($file, 60, 240, 130, 0, 'PNG');
 
 unlink($file);
 
+$pdf->SetXY(10, 260, $pdf->GetY());
 //
 $pdf->Cell(0, 10,  $arquivos[0]['nomePessoa'], 0, true, 'C');
 
 
+ 
 
 $tempPdfFile = array();
 $tempIMGFile = array();
@@ -220,10 +207,12 @@ foreach ($arquivos as $key => $value) {
 }
 
 
+ 
+
 
 // Output
 $pdf->Output();
-
+ 
 
 foreach ($tempPdfFile as $key => $value) {
     unlink($value);
@@ -234,3 +223,6 @@ foreach ($tempPdfFile as $key => $value) {
 foreach ($tempIMGFile as $key => $value) {
     unlink($value);
 }
+
+
+ 
