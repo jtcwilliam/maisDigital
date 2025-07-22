@@ -11,9 +11,9 @@ use setasign\Fpdi\Fpdi;
 
 $objArquivo = new Arquivo();
 
-$dadosSolicitacao = $objArquivo->solicitarArquivoRelatorio(189);
+$dadosSolicitacao = $objArquivo->solicitarArquivoRelatorio(196);
 
-$arquivos = $objArquivo->consultarArquivoParaSolicitacao(189);
+$arquivos = $objArquivo->consultarArquivoParaSolicitacao(196);
 
 
  
@@ -23,7 +23,7 @@ $arquivos = $objArquivo->consultarArquivoParaSolicitacao(189);
 $mes = $dadosSolicitacao[0]['mes'];
 
 setlocale(LC_TIME, 'pt_BR.utf8');
-$mes = strftime("%B", strtotime($mes));
+$mes = $mes;
 
 $dataDaSol = 'Guarulhos, ' . $dadosSolicitacao[0]['dias'] . $mes . $dadosSolicitacao[0]['ano'];
 
@@ -35,10 +35,11 @@ $pdf->AddPage();
 $pdf->Image('logoPrefeitura.png', 5, 10, 60);
 $pdf->SetFont('Arial', 'B', 30);
 
-$pdf->Text(65, 31, utf8_decode('Requerimento Padrão'));
+
+$pdf->Text(65, 31, iconv("UTF-8", "ISO-8859-1//TRANSLIT", 'Requerimento Padrão'));
 
 $pdf->SetFont('Arial', '', 13);
-$pdf->Text(10, 43, utf8_decode('Ao Excelentíssimo Senhor Prefeito do Município de Guarulhos '));
+$pdf->Text(10, 43, iconv("UTF-8", "ISO-8859-1//TRANSLIT", 'Ao Excelentíssimo Senhor Prefeito do Município de Guarulhos'));
 $pdf->Cell(190, 35, '', 0, 1, 'C');
 
 
@@ -50,7 +51,7 @@ $pdf->SetFont('Arial', '', 13);
 $pdf->SetX(10);
 $pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
 $pdf->SetXY(10, 53, $pdf->GetY());
-$pdf->WriteHTML(utf8_decode("<b>Nome do Solicitante:</b> " . $dadosSolicitacao[0]['nomePessoa'] . "<br><br><b>CPF ou CNPJ:</b> " . $dadosSolicitacao[0]['docSolicitacaoPessoal'] . " 
+$pdf->WriteHTML(iconv("UTF-8", "ISO-8859-1//TRANSLIT", "<b>Nome do Solicitante:</b> " . $dadosSolicitacao[0]['nomePessoa'] . "<br><br><b>CPF ou CNPJ:</b> " . $dadosSolicitacao[0]['docSolicitacaoPessoal'] . " 
 <br><br><b>Email:</b> " . $dadosSolicitacao[0]['emailUsuario'] . " <br> <br><b>Endereço: </b>" . $dadosSolicitacao[0]['logradouroSol'] .
     ", " . $dadosSolicitacao[0]['numeroSol'] . ". " . $dadosSolicitacao[0]['complemento'] . "  " . $dadosSolicitacao[0]['bairro'] . " <br><br><b>" . $dadosSolicitacao[0]['descricaoDoc'] . ":</b> " . $dadosSolicitacao[0]['documentoPublico'] . "<b><br><br>Venho, respeitosamente, solicitar</b><br><i><center>"
     . $dadosSolicitacao[0]['descricaoCarta'] . "<center></i>.<br><br><b>Complemento da Solicitação</b>:  <br>" . $dadosSolicitacao[0]['descricaoSolicitacao'] . " <br>  "));
@@ -104,7 +105,7 @@ foreach ($arquivos as $key => $value) {
             $pdf->SetFont('Arial', '', 13);
 
 
-            $pdf->WriteHTML("<p style='text-align: center'>" . utf8_decode($value['nomeArquivo']) . "</style> ");
+            $pdf->WriteHTML("<p style='text-align: center'>" .iconv("UTF-8", "ISO-8859-1//TRANSLIT", $value['nomeArquivo']) . "</style> ");
 
 
 
@@ -147,7 +148,7 @@ foreach ($arquivos as $key => $value) {
             $pdf->SetFont('Arial', '', 13);
 
 
-            $pdf->WriteHTML("<p style='text-align: center'>" . utf8_decode($value['nomeArquivo']) . "</style> ");
+            $pdf->WriteHTML("<p style='text-align: center'>" . iconv("UTF-8", "ISO-8859-1//TRANSLIT", $value['nomeArquivo']) . "</style> ");
 
             $pdf->AddPage();
             //insere a imagem nessa variavel
@@ -180,7 +181,7 @@ foreach ($arquivos as $key => $value) {
             $pdf->SetFont('Arial', '', 13);
 
 
-            $pdf->WriteHTML("<p style='text-align: center'>" . utf8_decode($value['nomeArquivo']) . "</style> ");
+            $pdf->WriteHTML("<p style='text-align: center'>" .  iconv("UTF-8", "ISO-8859-1//TRANSLIT", $value['nomeArquivo']) . "</style> ");
 
             $pdf->AddPage();
 
