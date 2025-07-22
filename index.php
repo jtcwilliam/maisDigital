@@ -22,9 +22,58 @@ include_once 'includes/head.php';
 
 ?>
 
-<body style="background-image: url('imgs/fundoSistema.png') ;         background-size: cover ">
+<body style="background-image: url('imgs/fundoSistema.png') ;         background-size: cover " id="telaMaior">
 
     <!-- modais de informação sucesso cadastrado -->
+
+
+    <div class=" full reveal" id="exibirSolicitacoes" data-reveal style="background-color:rgb(216, 216, 219);  ">
+        <div style="display: grid;  justify-content: center; align-content: center;  padding-top: 0px;" id="exibirSolicitacaoModal">
+
+        </div>
+        <br>
+        <div class="grid-x grid-padding-x" id="containerCadastro" style="height: 70vh;  ">
+            <div class="auto cell"></div>
+            <div class="small-12 large-10 cell" style="color: green;">
+
+                <div class=" grid-x grid-padding-x" style="color: green;">
+                    <div class="small-12 large-2 cell" id="escolha"> <b>1</b><br>
+                        <i>Escolha da Solicitação</i>
+                    </div>
+
+                    <div class="small-12 large-3 cell" id="complemento"> <b>2</b><br>
+                        <i>Preenchimento da Solicitação</i>
+                    </div>
+
+                    <div class="small-12 large-2 cell" id="docsEstagio"> <b>3</b><br>
+                        <i id="docsEstagio">Documentação Necessária</i>
+                    </div>
+
+                    <div class="small-12 large-2 cell" id="finalizacao"> <b>4</b><br>
+                        <i>Assinatura</i>
+                    </div>
+
+                    <div class="small-12 large-3 cell" id="solicitacaoEnviada"> <b>5</b><br>
+                        <i>Solicitação Enviada Aguarde retorno</i>
+                    </div>
+
+                    <div class="small-12 large-12 cell" id="solicitacaoEnviada"><br>
+                        <a class="button" style="width: 100%; background-color: #2C255B;" onclick="$('#exibirSolicitacoes').foundation('close');">Fechar esta janela</a>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <br>
+            </div>
+            <div class="auto cell"></div>
+        </div>
+
+
+    </div>
 
 
     <!-- upload de arquivos -->
@@ -493,7 +542,7 @@ include_once 'includes/head.php';
 
     </div>
 
-    <div class="grid-x grid-padding-x" id="containerCadastraSolicitacao" style="display: none ;height: 120vh; background-color:rgb(216, 216, 219); margin: 30px; ">
+    <div class="grid-x grid-padding-x" id="containerCadastraSolicitacao" style="display: none ;height: 120vh; background-color:rgb(216, 216, 219); margin-top: 0; ">
 
 
 
@@ -506,7 +555,7 @@ include_once 'includes/head.php';
 
 
 
-        include 'telaSolicitacao.php'
+        include 'telaSolicitacao.php';
 
         ?>
 
@@ -530,6 +579,9 @@ include_once 'includes/head.php';
             $('.agendaCompleto').hide();
             $('#logarCompleto').hide();
 
+
+
+
             <?php
 
 
@@ -551,7 +603,10 @@ include_once 'includes/head.php';
 
         function persist(condicao) {
 
+
             if (condicao == 1) {
+                $('#telaMaior').css('background-image', 'none');
+                $('#telaMaior').css('background-color', '  rgb(216, 216, 219)')
                 $('#containerCadastro').fadeOut(200).promise().done(function() {
                     setTimeout(() => {
                         $('#containerCadastraSolicitacao').fadeIn(1000);
@@ -700,6 +755,7 @@ include_once 'includes/head.php';
                         $('#containerCadastro').fadeOut(200).promise().done(function() {
                             setTimeout(() => {
                                 $('#containerCadastraSolicitacao').fadeIn(1000);
+
                             }, 50)
 
                         });

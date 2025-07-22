@@ -9,7 +9,7 @@ if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicos') {
 
     $objservico = new Servicos();
 
-    $dados = $objservico->trazerServicos();
+    $dados = $objservico->servicosHabilitados();
 
 
 

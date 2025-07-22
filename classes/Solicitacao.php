@@ -44,6 +44,56 @@ class Solicitacao
         $this->setPdoConn($objbanco);
     }
 
+
+    //
+
+    public function  consultaSolicitacaoPorStatus($status)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = "select        sl.assuntoSolicitacao,  descricaoCarta, date_format(dataSolicitacao, '%d/%m/%Y  ás  %H:%i') as dias, nomeSecretaria,  stt.descricaoStatus , sl.idsolicitacao      from solicitacao sl 
+             inner join status stt on sl.statusSolicitacao = stt.idStatus inner join linkCartaServico lcs on lcs.idlinkCartaServico = sl.assuntoSolicitacao 
+             where sl.statussolicitacao =" . $status;
+
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
     public function  trazerSolicitacao($protocolo)
     {
         try {
@@ -146,7 +196,23 @@ class Solicitacao
 
 
 
-            $sql = "select  * from solicitacao where  idSolicitacao='" . $idSolicitacao . "'  and statusSolicitacao=10 ";
+            $sql = " select lc.descricaoCarta,  sl.descricaoSolicitacao  ,lc.nomeSecretaria, sl.solicitante,
+             sl.tipoDocumento, sl.documentoPublico,  nomeArquivo, tipoArquivo, 
+ dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao,  sl.cepSolicitacao   ,  sl.logradouroSol    ,  sl.numeroSol,
+  sl.complemento, sl.bairro ,
+  date_format(dataSolicitacao, '%d ' ) as 'dias', 
+
+  date_format(dataSolicitacao, '%M' ) as 'mes', 
+
+  date_format(dataSolicitacao, ' de %Y ' ) as 'ano', sl.assinaturaSolicitacao,
+  date_format(dataSolicitacao, '%d/%m/%Y') as 'diaDaSolicitacao' , sts.descricaoStatus
+ 
+ 
+  from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao 
+ inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante 
+ INNER join arquivos ar on ar.idSolicitacao  = sl.idsolicitacao 
+ inner join status sts on sts.idStatus = sl.statusSolicitacao
+ where sl.idsolicitacao =" . $idSolicitacao . "  and statusSolicitacao=10 ";
 
 
 

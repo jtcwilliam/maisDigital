@@ -11,14 +11,21 @@ use setasign\Fpdi\Fpdi;
 
 $objArquivo = new Arquivo();
 
-$arquivos = $objArquivo->solicitarArquivoRelatorio(165);
+$dadosSolicitacao = $objArquivo->solicitarArquivoRelatorio(189);
 
-$mes = $arquivos[0]['mes'];
+$arquivos = $objArquivo->consultarArquivoParaSolicitacao(189);
+
+
+ 
+ 
+ 
+
+$mes = $dadosSolicitacao[0]['mes'];
 
 setlocale(LC_TIME, 'pt_BR.utf8');
 $mes = strftime("%B", strtotime($mes));
 
-$dataDaSol = 'Guarulhos, ' . $arquivos[0]['dias'] . $mes . $arquivos[0]['ano'];
+$dataDaSol = 'Guarulhos, ' . $dadosSolicitacao[0]['dias'] . $mes . $dadosSolicitacao[0]['ano'];
 
 // Criar PDF com FPDF + FPDI
 $pdf = new Fpdi();
@@ -43,19 +50,19 @@ $pdf->SetFont('Arial', '', 13);
 $pdf->SetX(10);
 $pdf->MultiCell(0, 6, '', 0, 'J'); // Reservar área
 $pdf->SetXY(10, 53, $pdf->GetY());
-$pdf->WriteHTML(utf8_decode("<b>Nome do Solicitante:</b> " . $arquivos[0]['nomePessoa'] . "<br><br><b>CPF ou CNPJ:</b> " . $arquivos[0]['docSolicitacaoPessoal'] . " 
-<br><br><b>Email:</b> " . $arquivos[0]['emailUsuario'] . " <br> <br><b>Endereço: </b>" . $arquivos[0]['logradouroSol'] . 
-", " . $arquivos[0]['numeroSol'] . ". " . $arquivos[0]['complemento'] . "  " . $arquivos[0]['bairro'] . " <br><br><b>" . $arquivos[0]['descricaoDoc'] . ":</b> " . $arquivos[0]['documentoPublico']. "<b><br><br>Venho, respeitosamente, solicitar</b><br><i><center>" 
-. $arquivos[0]['descricaoCarta'] . "<center></i>.<br><br><b>Complemento da Solicitação</b>:  <br>" . $arquivos[0]['descricaoSolicitacao'] . " <br>  "));
+$pdf->WriteHTML(utf8_decode("<b>Nome do Solicitante:</b> " . $dadosSolicitacao[0]['nomePessoa'] . "<br><br><b>CPF ou CNPJ:</b> " . $dadosSolicitacao[0]['docSolicitacaoPessoal'] . " 
+<br><br><b>Email:</b> " . $dadosSolicitacao[0]['emailUsuario'] . " <br> <br><b>Endereço: </b>" . $dadosSolicitacao[0]['logradouroSol'] .
+    ", " . $dadosSolicitacao[0]['numeroSol'] . ". " . $dadosSolicitacao[0]['complemento'] . "  " . $dadosSolicitacao[0]['bairro'] . " <br><br><b>" . $dadosSolicitacao[0]['descricaoDoc'] . ":</b> " . $dadosSolicitacao[0]['documentoPublico'] . "<b><br><br>Venho, respeitosamente, solicitar</b><br><i><center>"
+    . $dadosSolicitacao[0]['descricaoCarta'] . "<center></i>.<br><br><b>Complemento da Solicitação</b>:  <br>" . $dadosSolicitacao[0]['descricaoSolicitacao'] . " <br>  "));
 
- 
+
 
 $pdf->SetXY(10, 230, $pdf->GetY());
 
 $pdf->SetFont('Arial', 'B', 13);
 $pdf->Cell(190, 8, $dataDaSol, 0, 0, 'j');
 
-$base64 =   $arquivos[0]['assinaturaSolicitacao'];
+$base64 =   $dadosSolicitacao[0]['assinaturaSolicitacao'];
 
 // Remover o prefixo data:image/png;base64,
 $base64 = str_replace('data:image/png;base64,', '', $base64);
@@ -77,10 +84,10 @@ unlink($file);
 
 $pdf->SetXY(10, 260, $pdf->GetY());
 //
-$pdf->Cell(0, 10,  $arquivos[0]['nomePessoa'], 0, true, 'C');
+$pdf->Cell(0, 10,  $dadosSolicitacao[0]['nomePessoa'], 0, true, 'C');
 
 
- 
+
 
 $tempPdfFile = array();
 $tempIMGFile = array();
@@ -207,12 +214,12 @@ foreach ($arquivos as $key => $value) {
 }
 
 
- 
+
 
 
 // Output
 $pdf->Output();
- 
+
 
 foreach ($tempPdfFile as $key => $value) {
     unlink($value);
@@ -223,6 +230,3 @@ foreach ($tempPdfFile as $key => $value) {
 foreach ($tempIMGFile as $key => $value) {
     unlink($value);
 }
-
-
- 

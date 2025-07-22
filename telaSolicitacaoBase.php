@@ -8,68 +8,15 @@ echo '</pre>';
 
 ?>
 
-
 <div class="small-12 large-12 cell" style="padding: 30px;">
 
-    <div class=" grid-x grid-padding-x">
+    <div class=" grid-x grid-padding-x" style="padding: 30px;">
         <div class="small-12 large-12 cell">
 
 
 
-            <fieldset class="fieldset" id="aberturaSolicitacao">
-                <legend>
-                    <h3>Olá. Seja bem vindo ao + Digital</h3>
-                </legend>
-
-
-
-                <div class="small-12 large-12 cell">
-                    <br>
-
-                    <a class="button " target="_blank" style="font-weight: 300; width: 100%;" onclick=" $('#iniciosSolicitacao').show();   $('#aberturaSolicitacao').hide(); ">
-                        Abrir uma nova Solicitação
-                    </a>
-
-                </div>
-
-
-
-                <div class="small-12 large-12 cell">
-
-
-                    <fieldset class="fieldset">
-                        <legend>
-                            <h4>Solicitações em Andamento</h4>
-                        </legend>
-
-
-
-                        <div id="solicitacaoStatusContainer" style="background-color: gray;">
-
-
-                        </div>
-
-
-                    </fieldset>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-            </fieldset>
-
-
-
             <!-- combo com a carta de serviço.. inicial  . -->
-            <fieldset class="fieldset" id="iniciosSolicitacao">
+            <fieldset class="fieldset" id="iniciosSolicitacao" style="display: none;  ">
                 <legend>
                     <h3>Olá. Vamos fazer sua solicitação no +Digital</h3>
                 </legend>
@@ -123,7 +70,7 @@ echo '</pre>';
 
 
             <!-- area para fazer a solicitacao-->
-            <fieldset class="fieldset" id="fieldSolicitacao">
+            <fieldset class="fieldset" id="fieldSolicitacao" style="display: none;">
                 <legend>
                     <h4 id=""> </h4>
                 </legend>
@@ -260,7 +207,7 @@ echo '</pre>';
                     </div>
             </fieldset>
 
-            <fieldset class="fieldset" id="documentacao">
+            <fieldset class="fieldset" id="documentacao" style="display: none;">
                 <input type="hidden" id='idSolicitacaoHidden' />
 
                 <legend>
@@ -288,7 +235,7 @@ echo '</pre>';
             </fieldset>
 
 
-            <fieldset class="fieldset" id="envioAssinatura">
+            <fieldset class="fieldset" id="envioAssinatura" style="display: none;">
 
 
                 <legend>
@@ -309,8 +256,9 @@ echo '</pre>';
                             $('#complemento').css('color', 'rgba(8, 124, 4, 0.66)' ); 
                             $('#docsEstagio').css('color', 'rgba(8, 124, 4, 0.66)' );
                             $('#finalizacao').css('color', 'rgba(8, 124, 4, 0.66)' );
-                        $('#solicitacaoEnviada').css('color', 'rgba(8, 124, 4, 0.66)' );" style="width: 60%;">Se você ja assinou, clique aqui!</a>
-                        </center>
+                            
+                        
+                        " style="width: 60%;">Se você ja assinou, clique aqui!</a></center>
 
 
 
@@ -321,34 +269,21 @@ echo '</pre>';
 
             </fieldset>
 
-            <fieldset class="fieldset" id="finalizacaoSolicitacao">
+            <fieldset class="fieldset" id="finalizacaoSolicitacao" style="display: block; margin-top: 0px;">
 
 
                 <legend>
-                    <h4 id="">Sua Solicitação foi cadastrada com sucesso</h4>
-
+                    <h4 id="">Aqui está sua solicitacao</h4>
                 </legend>
                 <br>
-                <div class=" grid-x grid-padding-x" style="display: block; margin-top: -60px;">
 
-                </div>
-
-                <div class=" grid-x grid-padding-x" style="display: block; margin-top: -60px;">
+                <div class=" grid-x grid-padding-x"    style="display: block; margin-top: -60px;">
                     <div class="small-12 large-12 cell" style="width: 100%;  " id="solicitacaoFinalizada">
 
 
 
 
                     </div>
-
-                    <div class="small-12 large-12 cell" style="width: 100%;  " id="solicitacaoFinalizada">
-
-
-
-
-                    </div>
-
-
                 </div>
 
 
@@ -366,66 +301,68 @@ echo '</pre>';
 
 
                     <center>
-                        <div class=" grid-x grid-padding-x">
-                            <div class="small-12 large-2 cell" id="escolha"> <b>1</b><br>
-                                <i>Escolha da Solicitação</i>
+                        <div class="small-12 large-8 cell">
+
+                            <div class=" grid-x grid-padding-x">
+                                <div class="small-12 large-2 cell" id="escolha"> <b>1</b><br>
+                                    <i>Escolha da Solicitação</i>
+                                </div>
+
+                                <div class="small-12 large-2 cell" id="complemento" style="color: #999;"> <b>2</b><br>
+                                    <i>Complemento da Solicitação</i>
+                                </div>
+
+                                <div class="small-12 large-2 cell" id="docsEstagio" style="color: #999;"> <b>3</b><br>
+                                    <i id="docsEstagio">Documentação Necessária</i>
+                                </div>
+
+                                <div class="small-12 large-2 cell" id="finalizacao" style="color: #999;"> <b>3</b><br>
+                                    <i>Assinatura</i>
+                                </div>
+
+                                <div class="small-12 large-2 cell" id="solicitacaoEnviada" style="color: #999;"> <b>3</b><br>
+                                    <i>Solicitação Enviada</i>
+                                </div>
+
+
+
+
+
                             </div>
 
-                            <div class="small-12 large-2 cell" id="complemento" style="color: #999;"> <b>2</b><br>
-                                <i>Complemento da Solicitação</i>
-                            </div>
-
-                            <div class="small-12 large-2 cell" id="docsEstagio" style="color: #999;"> <b>3</b><br>
-                                <i id="docsEstagio">Documentação Necessária</i>
-                            </div>
-
-                            <div class="small-12 large-2 cell" id="finalizacao" style="color: #999;"> <b>4</b><br>
-                                <i>Assinatura</i>
-                            </div>
-
-                            <div class="small-12 large-2 cell" id="solicitacaoEnviada" style="color: #999;"> <b>5</b><br>
-                                <i>Solicitação Enviada</i>
-                            </div>
                         </div>
                     </center>
 
+                    <div class="small-12 large-3 cell">
 
-                    <div class="small-12 large-12 cell" id="botaoRetorno">
-                        <center><a class="button " style="width: 40%; margin-top: 40px;  " onclick="window.location.reload()">Voltar para a tela inicial das Solicitações</a></center>
+
                     </div>
                 </div>
 
-                <div class="small-12 large-3 cell">
 
 
-                </div>
+
+
+
+            </fieldset>
+
+
+
+
+
+
+
+
         </div>
 
 
 
 
-
-
-        </fieldset>
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-</div>
 </div>
 
 <script>
     $('#linkHelpServico').hide();
-    $('#iniciosSolicitacao').hide();
     $('#fieldSolicitacao').hide();
     $('#documentacao').hide();
     $('.mensagemB').hide();
@@ -434,12 +371,7 @@ echo '</pre>';
     $('#finalizacaoSolicitacao').hide();
     $('#txtCEP').mask("00000-000");
 
-    $('#botaoRetorno').hide();
-
-
-
-    consultarSolicitacaoStatus(10);
-
+    finalizarSolicitacao(170);
 
 
 
@@ -580,45 +512,6 @@ echo '</pre>';
     }
 
 
-
-
-
-
-
-    //solicitacaoStatusContainer
-
-    function consultarSolicitacaoStatus(idStatus) {
-
-        var formData = {
-            idStatus,
-
-            trazerSolicitacaoStatus: '1'
-
-        };
-        $.ajax({
-                type: 'POST',
-                url: 'ajax/solicitacaoController.php',
-                data: formData,
-                dataType: 'html',
-                encode: true
-            })
-            .done(function(data) {
-
-
-
-
-                $('#solicitacaoStatusContainer').html(data);
-
-
-
-
-
-
-            });
-    }
-
-
-
     function finalizarSolicitacao(idSolicitacao) {
 
         var formData = {
@@ -636,43 +529,21 @@ echo '</pre>';
             })
             .done(function(data) {
 
+
+                console.log(data);
+
+
+
                 $('#envioAssinatura').hide();
 
                 $('#finalizacaoSolicitacao').show();
 
-                    $('#botaoRetorno').show();
-
                 $('#solicitacaoFinalizada').html(data);
 
-            });
-    }
 
 
 
-    function exibirSolicitacao(idSolicitacao) {
 
-        $('#exibirSolicitacoes').foundation('open');
-
-        var formData = {
-            idSolicitacao,
-
-            finalizaSolicitacao: '1'
-
-        };
-        $.ajax({
-                type: 'POST',
-                url: 'ajax/salvaAssinaturaController.php',
-                data: formData,
-                dataType: 'html',
-                encode: true
-            })
-            .done(function(data) {
-
-                $('#envioAssinatura').hide();
-
-
-
-                $('#exibirSolicitacaoModal').html(data);
 
             });
     }

@@ -4,6 +4,60 @@ include '../classes/Solicitacao.php';
 
 $objSolicitacao = new Solicitacao();
 
+if (isset($_POST['trazerSolicitacaoStatus'])) {
+    $solicitacaoStatus = $objSolicitacao->consultaSolicitacaoPorStatus($_POST['idStatus']); ?>
+
+
+
+    <div class=" grid-x  grid-padding-x" style="padding-bottom: 10px;">
+        <div class="small-12 large-12 cell">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="15%"> Status</th>
+                        <th width="65%">Serviço Solicitado</th>
+                        <th width="15%"> Data da Solicitação</th>
+
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php
+                    foreach ($solicitacaoStatus as $key => $value) {
+                    
+                    
+                    
+                    ?>
+
+                        <tr style="font-weight: 300;">
+                            <td> <a onclick="exibirSolicitacao( <?= $value['idsolicitacao'] ?>)"> <?= $value['descricaoStatus'] ?> </a>  </td>
+                            <td><?= $value['descricaoCarta'] ?></td>
+                            <td><?= $value['dias'] ?></td>
+
+
+
+                        </tr>
+
+
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+
+
+<?php
+    exit();
+}
+
+
 if (isset($_POST['inserirSolicitacao'])) {
 
     $ran = rand();

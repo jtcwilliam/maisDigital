@@ -29,6 +29,52 @@ class Servicos
         $this->setPdoConn($objbanco);
     }
 
+    public function  servicosHabilitados($filtro = null)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = "select  * from linkCartaServico  where servicoHabilitado=1";
+
+
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
+
+
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
     public function  trazerServicos($filtro = null)
     {
         try {
@@ -88,7 +134,7 @@ class Servicos
             //
             $stmt = $pdo->prepare(" UPDATE `linkCartaServico` SET `servicoHabilitado` = :habilitado, `infoAtendente` = :infoAtendente 
            WHERE `idlinkCartaServico` = :idCarta");
- 
+
 
             $stmt->bindValue(':habilitado',  $this->getServicoHabilitado(), PDO::PARAM_STR);
 

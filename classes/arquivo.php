@@ -91,6 +91,30 @@ class Arquivo
         }
     }
 
+    public function  consultarArquivoParaSolicitacao($idSolicitacao)
+    {
+        try {
+
+
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare("  select   nomeArquivo, tipoArquivo, arquivo from arquivos where idsolicitacao =" . $idSolicitacao);
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 
     public function  consultarQuantidadeArquivo($idSolicitacao)
     {
