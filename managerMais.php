@@ -155,6 +155,9 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                     encode: true
                 })
                 .done(function(data) {
+                    
+                    console.log(data);
+                    
 
                     $('#solicitacoes').html(data);
 

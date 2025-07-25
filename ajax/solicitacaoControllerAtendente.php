@@ -70,7 +70,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
 
 
-            <div class="small-12 large-2 cell">
+            <div class="small-12 large-3 cell">
                 <label>Dia da Solicitação</label>
                 <p><?= $assinaturaAtiva[0]['diaDaSolicitacao'] ?></p>
 
@@ -84,14 +84,10 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-5 cell">
                 <label>Logradouro</label>
-                <p><?= $assinaturaAtiva[0]['logradouroSol'] ?></p>
+                <p><?= $assinaturaAtiva[0]['logradouroSol'] .','. $assinaturaAtiva[0]['numeroSol'] ?></p>
 
             </div>
-            <div class="small-12 large-1 cell">
-                <label>Nº</label>
-                <p><?= $assinaturaAtiva[0]['numeroSol'] ?></p>
-
-            </div>
+           
             <div class="small-12 large-2 cell">
                 <label>Complemento</label>
                 <p><?= $assinaturaAtiva[0]['complemento'] ?></p>
@@ -99,22 +95,22 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             </div>
 
-            <div class="small-12 large-2 cell">
+            <div class="small-12 large-4 cell">
                 <label>Bairro</label>
                 <p><?= $assinaturaAtiva[0]['bairro'] ?></p>
 
             </div>
 
-            <div class="small-12 large-2 cell" id="boxInsc">
+            <div class="small-12 large-3 cell" id="boxInsc">
                 <label><?= $assinaturaAtiva[0]['descricaoDoc'] ?></label>
 
                 <p><?= $assinaturaAtiva[0]['documentoPublico'] ?></p>
 
             </div>
 
-            <div class="small-12 large-6 cell">
+            <div class="small-12 large-5 cell">
                 <?php
-                echo '<center><img style="" src="' . $assinaturaAtiva[0]['assinaturaSolicitacao']  . '" /><br> <p   style="margin-top: -50px; font-size:1.5em">' . $assinaturaAtiva[0]['nomePessoa']  . ' </p> </center>';
+                echo '<center><img style="" src="' . $assinaturaAtiva[0]['assinaturaSolicitacao']  . '" /><br> <p   style="margin-top: -30px; font-size:1em"> Assinatura </p> </center>';
                 ?>
             </div>
     </fieldset>

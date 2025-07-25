@@ -47,46 +47,95 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
 <body>
 
-    <style>
-        label {
-            font-size: 1.1em;
-        }
-    </style>
+    
 
-
-    <div class="reveal" id="adm_das_datas" data-reveal style="background-color:ivory">
+    <div class="large reveal" id="retorno" data-reveal style="background-color:ivory"  data-close-on-esc="false">
         <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
-            <div class="grid-x grid-padding-x" id="inforDatas"></div>
+
+
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 large-12 cell">
+                    <center>
+                        <h4>A Solicitação "<b><i><span id='textoSolicitacaoModal'></i></b>" com o id <b><span id='idSolicitacaoModal'></b>
+                            estará sob seus cudiados!</h4>
+                        <h5>Você será redirecionado para a tela de administração dessa solicitação. Aguarde!!!</h5>
+                    </center>
+                </div>
+
+
+
+            </div>
+
         </div>
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>
-    <?php
-    ////
-    include_once 'includes/linksAdm.php'; ?>
 
-    <input type="hidden" id="idSolicitacao" value="<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>" />
+    </div>
+
+
+
+    <?php
+
+    ////
+    include_once 'includes/linksAdm.php';
+
+    ?>
+
 
     <div class="grid-x grid-padding-x">
+
         <div class="small-12 large-8 cell" id="containnerSolicitacao">
-
-
-
+            <input type="hidden" id="idSolicitacao" value="<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>" />
         </div>
         <div class="small-12 large-4 cell">
             <fieldset class="fieldset" id="fieldSolicitacao" style="display: block; font-size:1em; width: 100%;">
-                <legend><h4 id=""><b>Arquivos anexos Solicitação</b></h4></legend>
+                <legend>
+                    <h4 id=""><b>Ações</b></h4>
+                </legend>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="small-1 cell" style=" display: inline; align-content: center; text-align: justify;">
+                        <h4><i class="fi-folder-add large"></i></h4>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;">
+                        <h5> <a onclick="$('#retorno').foundation('open');"> Arquivos da Solicitação </a></h5>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="small-1 cell" style=" display: inline; align-content: center; text-align: justify;">
+                        <h4><i class="fi-megaphone large"></i></h4>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;">
+                        <h5> Comunicar o cidadão</h5>
+                    </div>
+                </div>
+
+
+
+
             </fieldset>
         </div>
     </div>
 
-    <?
-    include_once 'includes/footer.php';
-    ?>
 
+
+    <?php
+
+    include_once 'includes/footer.php';
+
+    ?>
     <script>
-        exibirSolicitacao($('#idSolicitacao').val());
+        $(document).ready(function() {
+
+            exibirSolicitacao($('#idSolicitacao').val());
+
+
+        })
+       
+       
+        
 
         function exibirSolicitacao(idSolicitacao) {
             var formData = {
@@ -105,7 +154,10 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                     $('#containnerSolicitacao').html(data);
                 });
         }
+     
+       
     </script>
+
 
 
 </body>
