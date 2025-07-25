@@ -18,6 +18,8 @@ $docs = count($documentosInserir);
 $objServicos->setServicoHabilitado(1);
 $objServicos->setInfoAtendente($_POST['infoAtendimentos']);
 $objServicos->setIdCartaServico($_POST['comboServicos']);
+$objServicos->setCategoria($_POST['comboCategoria']);
+
 $i = 0;
 
 if ($objServicos->habilitarServicos()) {
@@ -25,6 +27,7 @@ if ($objServicos->habilitarServicos()) {
     foreach ($documentosInserir as $key => $value) {
 
         $objDocumentos->setIdServico($_POST['comboServicos']);
+
         $objDocumentos->setIdDocumento($value);
         $objDocumentos->setStatus('1');
 

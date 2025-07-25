@@ -24,6 +24,7 @@ class Solicitacao
     private $arquivo;
     private $solicitacao;
     private $documentoSolicitante;
+    private $idAtendente;
 
     private $cepSolicitacao;
     private $logradouroSol;
@@ -58,7 +59,7 @@ class Solicitacao
 
             $sql = "select        sl.assuntoSolicitacao,  descricaoCarta, date_format(dataSolicitacao, '%d/%m/%Y  ás  %H:%i') as dias, nomeSecretaria,  stt.descricaoStatus , sl.idsolicitacao      from solicitacao sl 
              inner join status stt on sl.statusSolicitacao = stt.idStatus inner join linkCartaServico lcs on lcs.idlinkCartaServico = sl.assuntoSolicitacao 
-             where sl.statussolicitacao =" . $status;
+             where sl.statussolicitacao in(" . $status . ")";
 
 
 
@@ -138,6 +139,55 @@ class Solicitacao
         }
     }
 
+    public function  pesquisarSolicitacoesPorCategoria($idCategoria)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+            $sql = "select  idSolicitacao     ,lc.descricaoCarta,  sl.descricaoSolicitacao  ,lc.nomeSecretaria, sl.solicitante,
+                    sl.tipoDocumento, sl.documentoPublico,
+                    dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao,  sl.cepSolicitacao,  
+                    sl.logradouroSol    ,  sl.numeroSol,
+                    sl.complemento, sl.bairro ,
+                    date_format(dataSolicitacao, '%d ' ) as 'dias', 
+                    date_format(dataSolicitacao, '%M' ) as 'mes', 
+                    date_format(dataSolicitacao, ' de %Y ' ) as 'ano',  date_format(dataSolicitacao, '%d/%m/%Y') as 'diaDaSolicitacao' ,
+                    sts.descricaoStatus, descricaoCategoria 
+                    from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao 
+                    inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante                     
+                    inner join status sts on sts.idStatus = sl.statusSolicitacao
+                    inner join pessoaTemCategoria ptc on ptc.categoriaPessoas = lc.categoria
+                    inner join categoria ct on ct.idCategoria = ptc.categoriaPessoas
+                    where  statusSolicitacao = 10 and   lc.categoria = " . $idCategoria;
+
+
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->execute();
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 
     public function  consultarSolicitacaoRelatorio($idSolicitacao)
     {
@@ -191,57 +241,86 @@ class Solicitacao
     {
         try {
 
-
             $pdo = $this->getPdoConn();
-
-
 
             $sql = " select lc.descricaoCarta,  sl.descricaoSolicitacao  ,lc.nomeSecretaria, sl.solicitante,
              sl.tipoDocumento, sl.documentoPublico,  nomeArquivo, tipoArquivo, 
- dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao,  sl.cepSolicitacao   ,  sl.logradouroSol    ,  sl.numeroSol,
-  sl.complemento, sl.bairro ,
-  date_format(dataSolicitacao, '%d ' ) as 'dias', 
+                dc.descricaoDoc, ps.nomePessoa, ps.emailUsuario, sl.docSolicitacaoPessoal, sl.assuntoSolicitacao,  sl.cepSolicitacao   ,  sl.logradouroSol    ,  sl.numeroSol,
+                sl.complemento, sl.bairro ,
+                date_format(dataSolicitacao, '%d ' ) as 'dias', 
 
-  date_format(dataSolicitacao, '%M' ) as 'mes', 
+                date_format(dataSolicitacao, '%M' ) as 'mes', 
 
-  date_format(dataSolicitacao, ' de %Y ' ) as 'ano', sl.assinaturaSolicitacao,
-  date_format(dataSolicitacao, '%d/%m/%Y') as 'diaDaSolicitacao' , sts.descricaoStatus
- 
- 
-  from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao 
- inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante 
- INNER join arquivos ar on ar.idSolicitacao  = sl.idsolicitacao 
- inner join status sts on sts.idStatus = sl.statusSolicitacao
- where sl.idsolicitacao =" . $idSolicitacao . "  and statusSolicitacao=10 ";
-
-
-
-            $stmt = $pdo->prepare($sql);
+                date_format(dataSolicitacao, ' de %Y ' ) as 'ano', sl.assinaturaSolicitacao,
+                date_format(dataSolicitacao, '%d/%m/%Y') as 'diaDaSolicitacao' , sts.descricaoStatus
+                
+                
+                from solicitacao sl inner join  linkCartaServico lc on lc.idlinkCartaServico = sl.assuntoSolicitacao 
+                inner join documentos dc on dc.idDoc = sl.tipoDocumento inner join pessoas ps on ps.idPessoas = sl.solicitante 
+                INNER join arquivos ar on ar.idSolicitacao  = sl.idsolicitacao 
+                inner join status sts on sts.idStatus = sl.statusSolicitacao
+                where sl.idsolicitacao =" . $idSolicitacao . "  and statusSolicitacao in (10,11) ";
 
 
-            $stmt->execute();
 
-            //$user = $stmt->fetchAll();
-
-            $retorno = array();
-
-            $dados = array();
-
-            $row = $stmt->fetchAll();
-
-            foreach ($row as $key => $value) {
-                $dados[] = $value;
-            }
+                $stmt = $pdo->prepare($sql);
 
 
-            if (!isset($dados)) {
-                $retorno['condicao'] = false;
-            }
+                $stmt->execute();
+
+                //$user = $stmt->fetchAll();
+
+                $retorno = array();
+
+                $dados = array();
+
+                $row = $stmt->fetchAll();
+
+                foreach ($row as $key => $value) {
+                    $dados[] = $value;
+                }
+
+
+                if (!isset($dados)) {
+                    $retorno['condicao'] = false;
+                }
 
 
 
 
             return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+
+    public function  atribuirSolicitacaoAtendente()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+
+            $idAtendente =   $this->getIdAtendente();
+            $idSolicitacao = $this->getSolicitacao();
+            $idStatusSolicitacao = $this->getStatusSolicitacao();
+
+            $stmt = $pdo->prepare("  UPDATE solicitacao set idAtendente=?, statusSolicitacao=?     where idSolicitacao=?");
+
+            //corrigir isto aqui
+            $stmt->bindParam(1,  $idAtendente, PDO::PARAM_INT);
+            $stmt->bindParam(2,  $idStatusSolicitacao, PDO::PARAM_INT);
+            $stmt->bindParam(3,  $idSolicitacao, PDO::PARAM_INT);
+
+
+
+
+
+            if ($stmt->execute()) {
+                return true;
+            }
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
@@ -758,6 +837,26 @@ class Solicitacao
     public function setBairro($bairro)
     {
         $this->bairro = $bairro;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idAtendente
+     */
+    public function getIdAtendente()
+    {
+        return $this->idAtendente;
+    }
+
+    /**
+     * Set the value of idAtendente
+     *
+     * @return  self
+     */
+    public function setIdAtendente($idAtendente)
+    {
+        $this->idAtendente = $idAtendente;
 
         return $this;
     }

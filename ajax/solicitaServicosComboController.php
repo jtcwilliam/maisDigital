@@ -2,6 +2,24 @@
 
 
 
+//combo Categorias da da pagina Habilitacao
+if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicosCategoria') {
+    include_once '../classes/Categoria.php';
+
+    $objCategoria = new Categoria();
+
+    $dados =    $objCategoria->trazerCategorias();
+
+    echo  '<option    >     </option>';
+
+    foreach ($dados as $key => $value) {
+        echo '<option     value=' . $value['idCategoria'] . '  >' .  $value['descricaoCategoria'] . '</option>';
+    }
+}
+
+
+
+
 
 //combo serviços da pagina index (criado para trazer o link)
 if (isset($_POST['containner']) && $_POST['containner'] == 'comboServicos') {

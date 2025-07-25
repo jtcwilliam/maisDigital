@@ -16,6 +16,7 @@ class Servicos
     private $infoAtendente;
     private $servicoHabilitado;
     private $idCartaServico;
+    private $categoria;
 
     function __construct()
     {
@@ -132,7 +133,8 @@ class Servicos
 
 
             //
-            $stmt = $pdo->prepare(" UPDATE `linkCartaServico` SET `servicoHabilitado` = :habilitado, `infoAtendente` = :infoAtendente 
+            $stmt = $pdo->prepare(" UPDATE `linkCartaServico` SET `servicoHabilitado` = :habilitado,    `categoria` = :categoria,
+                `infoAtendente` = :infoAtendente 
            WHERE `idlinkCartaServico` = :idCarta");
 
 
@@ -141,6 +143,8 @@ class Servicos
             $stmt->bindValue(':infoAtendente',  $this->getInfoAtendente(), PDO::PARAM_STR);
 
             $stmt->bindValue(':idCarta', $this->getIdCartaServico(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':categoria', $this->getCategoria(), PDO::PARAM_STR);
 
             if ($stmt->execute()) {
 
@@ -310,6 +314,26 @@ class Servicos
     public function setIdCartaServico($idCartaServico)
     {
         $this->idCartaServico = $idCartaServico;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of categoria
+     */ 
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * Set the value of categoria
+     *
+     * @return  self
+     */ 
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
 
         return $this;
     }

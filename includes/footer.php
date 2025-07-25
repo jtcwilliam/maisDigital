@@ -112,7 +112,7 @@
                 encode: true
             })
             .done(function(data) {
-                //  console.log(data);
+                  console.log(data);
 
 
                 $(`#${containner}`).html('<option>Aguarde</option>');

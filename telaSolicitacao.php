@@ -438,7 +438,7 @@ echo '</pre>';
 
 
 
-    consultarSolicitacaoStatus(10);
+    consultarSolicitacaoStatus('10, 11');
 
 
 
@@ -640,7 +640,7 @@ echo '</pre>';
 
                 $('#finalizacaoSolicitacao').show();
 
-                    $('#botaoRetorno').show();
+                $('#botaoRetorno').show();
 
                 $('#solicitacaoFinalizada').html(data);
 

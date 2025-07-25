@@ -273,11 +273,12 @@ class Pessoa
 
             $stmt = $pdo->prepare("select  ps.nomePessoa as 'nome', un.nomeUnidade as 'nomeUnidade', st.descricaoStatus as 'descricaoStatus' , 
             tp.descricaoTipoPessoa as 'tipoPessoa', ps.pwd, ps.documentoPessoa  as 'documentoPessoa',  
-            ps.*, st.*, tp.*, un.* from pessoas ps 
+            ps.*, st.*, tp.*, un.*, ptc.categoriaPessoas from pessoas ps 
             inner join unidade un on ps.unidade = un.idUnidade 
             inner join status st on st.idStatus = ps.statusPessoa  
             inner join tipoPessoa tp on tp.idTipoPessoa = ps.tipoPessoa 
-            where emailUsuario = '" . $this->getEmailUsuario() . "'");
+            inner join pessoaTemCategoria ptc on ptc.PessoasCategoria = ps.idPessoas
+            where emailUsuario ='" . $this->getEmailUsuario() . "'");
 
             $stmt->execute();
 
