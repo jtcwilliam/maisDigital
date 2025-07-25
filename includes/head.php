@@ -35,7 +35,7 @@
         }
 
         .fundoBotoesTopo {
-            background-color: #28536b;
+            background-color: #635d4d;
         }
 
         .reveal-overlay {

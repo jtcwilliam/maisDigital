@@ -4,22 +4,76 @@
 
 
 include_once '../classes/Solicitacao.php';
-
-
-
-
+include_once '../classes/arquivo.php';
 
 $objSolicitacao = new Solicitacao();
+$objArquivo = new Arquivo();
+
+
+
+
+if (isset($_POST['listarArquivosAtendente'])) {
+
+
+    $arquivo = $objArquivo->consultarDadosArquivosParaInfo($_POST['solicitacao']);
+?>
+
+
+
+    <?php
+
+
+
+
+    foreach ($arquivo as $key => $value) {
+
+        switch ($value['tipoArquivo']) {
+            case 'image/jpeg':
+                $img = '<h4><i class="fi-photo large"></i></h4>';
+                break;
+
+            case 'image/png':
+                $img = '<h4><i class="fi-photo large"></i></h4>';
+                break;
+
+            case 'application/pdf':
+                $img = '<h4><i class="fi-page-pdf large"></i></h4>';
+                break;
+
+            default:
+                # code...
+                break;
+        }
+
+
+
+        echo '  <tr>
+                        <td>' . $img  . '</td>
+                        <td>' . $value['nomeArquivo'] . '</td>
+                        <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo='.$value['idArquivo'].'" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
+                        <td><center>  <h4><i class="fi-check large"></i></h4> </center> </td>
+                        <td><center>  <h4><i class="fi-x large"></i></h4></center> </td>
+                    
+                    
+                    
+                </tr>';
+    }
+
+
+    exit();
+}
+
+
 
 
 
 if (isset($_POST['exibirSolicitacaoAtendente'])) {
     $assinaturaAtiva =     $objSolicitacao->pesquisarAssinatura($_POST['idSolicitacao']);
-?>
+    ?>
 
     <fieldset class="fieldset" id="fieldSolicitacao" style="display: block; font-size:1em">
         <legend>
-            <h4 id=""><b>Solicitação</b></h4>
+            <h4 id="" style="color: #56658E; "><b>Solicitação</b></h4>
         </legend>
 
 
@@ -28,14 +82,14 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
 
             <div class="small-12 large-10 cell">
-                <label>Assunto da Solicitação</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Assunto da Solicitação</label>
                 <p><?= $assinaturaAtiva[0]['descricaoCarta'] ?></p>
 
             </div>
 
 
             <div class="small-12 large-12 cell">
-                <label>Descrição da Sua Solicitação</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Descrição da Sua Solicitação</label>
                 <p><?= $assinaturaAtiva[0]['descricaoSolicitacao'] ?></p>
             </div>
 
@@ -46,7 +100,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
     <fieldset class="fieldset" id="fieldSolicitacao" style="display: block; font-size:1em">
         <legend>
-            <h4 id=""><b>Dados do Solicitante</b></h4>
+            <h4 id="" style="color: #56658E; "><b>Dados do Solicitante</b></h4>
         </legend>
 
 
@@ -55,54 +109,54 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
 
             <div class="small-12 large-4 cell">
-                <label>Nome do Solicitante</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Nome do Solicitante</label>
                 <p><?= $assinaturaAtiva[0]['nomePessoa'] ?> </p>
             </div>
             <div class="small-12 large-4 cell">
-                <label>CPF do Solicitante</label>
+                <label style="color: #56658E; font-size: 1.1em; ">CPF do Solicitante</label>
                 <p><?= $assinaturaAtiva[0]['docSolicitacaoPessoal'] ?></p>
             </div>
 
             <div class="small-12 large-4 cell">
-                <label>Email do Solicitante</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Email do Solicitante</label>
                 <p><?= $assinaturaAtiva[0]['emailUsuario'] ?></p>
             </div>
 
 
 
             <div class="small-12 large-3 cell">
-                <label>Dia da Solicitação</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Dia da Solicitação</label>
                 <p><?= $assinaturaAtiva[0]['diaDaSolicitacao'] ?></p>
 
             </div>
 
             <div class="small-12 large-2 cell">
-                <label>CEP: </label>
+                <label style="color: #56658E; font-size: 1.1em; ">CEP: </label>
                 <p><?= $assinaturaAtiva[0]['cepSolicitacao'] ?></p>
 
             </div>
 
             <div class="small-12 large-5 cell">
-                <label>Logradouro</label>
-                <p><?= $assinaturaAtiva[0]['logradouroSol'] .','. $assinaturaAtiva[0]['numeroSol'] ?></p>
+                <label style="color: #56658E; font-size: 1.1em; ">Logradouro</label>
+                <p><?= $assinaturaAtiva[0]['logradouroSol'] . ',' . $assinaturaAtiva[0]['numeroSol'] ?></p>
 
             </div>
-           
+
             <div class="small-12 large-2 cell">
-                <label>Complemento</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Complemento</label>
                 <p><?= $assinaturaAtiva[0]['complemento'] ?></p>
 
 
             </div>
 
             <div class="small-12 large-4 cell">
-                <label>Bairro</label>
+                <label style="color: #56658E; font-size: 1.1em; ">Bairro</label>
                 <p><?= $assinaturaAtiva[0]['bairro'] ?></p>
 
             </div>
 
             <div class="small-12 large-3 cell" id="boxInsc">
-                <label><?= $assinaturaAtiva[0]['descricaoDoc'] ?></label>
+                <label style="color: #56658E; font-size: 1.1em; "><?= $assinaturaAtiva[0]['descricaoDoc'] ?></label>
 
                 <p><?= $assinaturaAtiva[0]['documentoPublico'] ?></p>
 

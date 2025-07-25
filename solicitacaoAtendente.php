@@ -47,119 +47,172 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
 <body>
 
-    
+    <style>
+        a {
+            color: #635d4d;
+        }
+    </style>
 
-    <div class="large reveal" id="retorno" data-reveal style="background-color:ivory"  data-close-on-esc="false">
-        <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
-
-
-            <div class="grid-x grid-padding-x">
-                <div class="small-12 large-12 cell">
-                    <center>
-                        <h4>A Solicitação "<b><i><span id='textoSolicitacaoModal'></i></b>" com o id <b><span id='idSolicitacaoModal'></b>
-                            estará sob seus cudiados!</h4>
-                        <h5>Você será redirecionado para a tela de administração dessa solicitação. Aguarde!!!</h5>
-                    </center>
-                </div>
-
-
-
-            </div>
-
-        </div>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-        </button>
-
-    </div>
-
-
-
-    <?php
-
-    ////
-    include_once 'includes/linksAdm.php';
-
-    ?>
 
 
     <div class="grid-x grid-padding-x">
+        <div class="small-12 large-12 cell">
+            <div class="large reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
+                <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
 
-        <div class="small-12 large-8 cell" id="containnerSolicitacao">
-            <input type="hidden" id="idSolicitacao" value="<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>" />
+                    <table  class="table" style="width: 1000px">
+                        <thead>
+                            <tr>
+
+                                <th width="5%">Tipo</th>
+                                <th width="65%">Nome do Arquivo</th>
+                                <th width="10%"><center>Visualizar Arquivo</center></th>
+                                <th width="10%"><center>Validar arquivo</center></th>                                
+                                <th width="10%"><center>Excluir Arquivo</center></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaArquivos">
+
+
+                        </tbody>
+                    </table>
+
+
+                </div> 
+
+            </div>
         </div>
+
+        </span></button>
+    </div><?php
+
+            ////
+            include_once 'includes/linksAdm.php';
+
+
+            ?>
+
+
+    <div class="grid-x grid-padding-x">
+        <div class="small-12 large-8 cell" id="containnerSolicitacao">
+
+
+        </div>
+
+
         <div class="small-12 large-4 cell">
+            <input type="hidden" id="idSolicitacao" value="<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>" />
+
             <fieldset class="fieldset" id="fieldSolicitacao" style="display: block; font-size:1em; width: 100%;">
                 <legend>
-                    <h4 id=""><b>Ações</b></h4>
+                    <h4 id="" onclick="$('#retorno').foundation('open')" style="color: #56658E; "><b>Ações</b></h4>
                 </legend>
+                <div class="grid-x  grid-padding-x">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-folder-add large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
 
-                <div class="grid-x grid-padding-x">
-                    <div class="small-1 cell" style=" display: inline; align-content: center; text-align: justify;">
-                        <h4><i class="fi-folder-add large"></i></h4>
-                    </div>
-                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;">
-                        <h5> <a onclick="$('#retorno').foundation('open');"> Arquivos da Solicitação </a></h5>
-                    </div>
-                </div>
 
-                <div class="grid-x grid-padding-x">
-                    <div class="small-1 cell" style=" display: inline; align-content: center; text-align: justify;">
-                        <h4><i class="fi-megaphone large"></i></h4>
-                    </div>
-                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;">
-                        <h5> Comunicar o cidadão</h5>
+                        <a onclick="exbirArquivosDaSolicitacao($('#idSolicitacao').val())">
+                            <h4>Arquivos da Solicitação </h4>
+                        </a>
                     </div>
                 </div>
-
-
-
-
+                <div class="grid-x  grid-padding-x">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-megaphone large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h4>Comunicar ao Cidadão </h4>
+                    </div>
+                </div>
+                <div class="grid-x  grid-padding-x" style="color: #56658E">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-archive large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify; color: #56658E">
+                        <h4>Arquivar Solicitação </h4>
+                    </div>
+                </div>
+                <div class="grid-x  grid-padding-x">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-check large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h4>Aprovar Solicitação </h4>
+                    </div>
+                </div>
+                <div class="grid-x  grid-padding-x">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-page-copy large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h4>Encaminhar para Processo SEI </h4>
+                    </div>
+                </div>
             </fieldset>
         </div>
-    </div>
+    </div><?php
 
+            include_once 'includes/footer.php';
 
-
-    <?php
-
-    include_once 'includes/footer.php';
-
-    ?>
-    <script>
+            ?><script>
         $(document).ready(function() {
 
             exibirSolicitacao($('#idSolicitacao').val());
 
 
         })
-       
-       
-        
 
         function exibirSolicitacao(idSolicitacao) {
             var formData = {
                 idSolicitacao,
                 exibirSolicitacaoAtendente: '1'
-            };
+            }
+
+            ;
+
             $.ajax({
-                    type: 'POST',
-                    url: 'ajax/solicitacaoControllerAtendente.php',
-                    data: formData,
-                    dataType: 'html',
-                    encode: true
-                })
-                .done(function(data) {
+                type: 'POST',
+                url: 'ajax/solicitacaoControllerAtendente.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
 
-                    $('#containnerSolicitacao').html(data);
-                });
+            }).done(function(data) {
+
+                $('#containnerSolicitacao').html(data);
+            });
         }
-     
-       
+
+        function exbirArquivosDaSolicitacao(solicitacao) {
+
+
+
+            var formData = {
+                solicitacao,
+                listarArquivosAtendente: '1'
+            }
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/solicitacaoControllerAtendente.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+
+            }).done(function(data) {
+
+                $('#tabelaArquivos').html(data);
+
+                $('#retorno').foundation('open');
+            });
+        }
     </script>
-
-
-
 </body>
 
 </html>

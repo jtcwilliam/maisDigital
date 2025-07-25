@@ -32,13 +32,38 @@ class Arquivo
     }
 
 
-    public function  gerarArquivo()
+    public function  consultarDadosArquivosParaInfo($idSolicitacao)
+    {
+        try {
+
+
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare("  select  idArquivo ,nomeArquivo, tipoArquivo  from arquivos where idsolicitacao =" . $idSolicitacao);
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+    public function  gerarArquivo($idArquivo)
     {
         try {
 
             $pdo = $this->getPdoConn();
 
-            $stmt = $pdo->prepare(" select arquivo from arquivos where idarquivo = 13 ");
+            $stmt = $pdo->prepare(" select arquivo, nomeArquivo, tipoArquivo  from arquivos where idarquivo =".$idArquivo);
 
 
             $stmt->execute();
