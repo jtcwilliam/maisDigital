@@ -7,6 +7,83 @@ include_once '../classes/Documentos.php';
 $objArquivo = new Arquivo();
 $objDOcumento = new Documentos();
 
+
+
+//controller que delete o arquivo e informa ao cidadão
+if (isset($_POST['apagarArquivoAtendente'])) {
+
+    //conteudo da mensagem do email
+
+    ob_start();
+
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body style="font-family: Arial, Helvetica, sans-serif;">
+        <center>
+            <h2>Olá <?= $nome ?> . Somos Equie Mais Digital da Prefeitura de Guarulhos </h2>
+
+            <p>O arquivo XXff que foi anexo a sua solicitação está errado. Clique no link que enviamos neste email para fazer a
+                alteração adequada e prosseguirmos para a conclusão de sua solicitação<br> <b>Observação:</b> Está solicitação permanecerá
+                sem prosseguimento, até que você faça esta correção. </p>
+
+
+
+
+            <a style="color: green; text-decoration: none; font-style: italic;"
+                href="#" target="_blank">
+                <h2>Clique aqui para alterar o Arquivo xxff</h2>
+            </a>
+            <br>
+
+            <h4> Estamos á Disposição!<br>
+
+                <b>Equipe Mais Digital</b>
+                <h2> Prefeitura de Guarulhos</h2>
+            </h4>
+
+
+
+
+
+        </center>
+    </body>
+
+    </html>
+    <?php
+    $dados = ob_get_contents();
+    ob_end_clean();
+
+
+    //fim do conteudo da mensagem do email
+
+    include_once '../classes/Envio.php';
+    $objEnvio = new Envio();
+
+    $objEnvio->setDestinatario($_POST['txtEmailParaEnvioArquivo']);
+    $objEnvio->setAssunto('Alteração de Arquivo na sua solicitação');
+    $objEnvio->setConteudo($dados);
+
+    if ($objEnvio->envioEmail()) {
+
+        return true;
+    }
+
+    exit();
+}
+
+
+
+
+
+
 if (isset($_POST['criaCampoArquivo'])) {
 
     $criarCaixaArquivo =  $objDOcumento->trazerDocumentoArquivo($_POST['idServico']);
@@ -27,11 +104,11 @@ if (isset($_POST['criaCampoArquivo'])) {
 
     $i = 0;
     foreach ($criarCaixaArquivo as $key => $value) {
-?>
+    ?>
 
 
         <div class=" grid-x  grid-padding-x " style="width: 100%;   ">
-            <div class=" small-12 large-12 cell"> 
+            <div class=" small-12 large-12 cell">
                 <p class="button   mensagemB " style="width: 100%; background-color: rgb(23, 121, 186);  " id="mensagem<?= $i ?>"> Arquivo Carregado com Sucesso</p>
             </div>
 
@@ -137,9 +214,4 @@ if ($objArquivo->inserirArquivos()) {
     */
 
     echo json_encode(array('retorno' => true));
-
-
-
-
-
 }

@@ -54,22 +54,38 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
     </style>
 
 
+    <?php
+
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
+
+
+    ?>
+
+
 
     <div class="grid-x grid-padding-x">
         <div class="small-12 large-12 cell">
             <div class="large reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
                 <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
 
-                    <table  class="table" style="width: 1000px">
+                    <table class="table" style="width: 1000px">
                         <thead>
                             <tr>
 
                                 <th width="5%">Tipo</th>
                                 <th width="65%">Nome do Arquivo</th>
-                                <th width="10%"><center>Visualizar Arquivo</center></th>
-                                <th width="10%"><center>Validar arquivo</center></th>                                
-                                <th width="10%"><center>Excluir Arquivo</center></th>
-                                
+                                <th width="10%">
+                                    <center>Visualizar Arquivo</center>
+                                </th>
+                                <th width="10%">
+                                    <center>Validar arquivo</center>
+                                </th>
+                                <th width="10%">
+                                    <center>Excluir Arquivo</center>
+                                </th>
+
                             </tr>
                         </thead>
                         <tbody id="tabelaArquivos">
@@ -79,7 +95,7 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                     </table>
 
 
-                </div> 
+                </div>
 
             </div>
         </div>
@@ -187,17 +203,39 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
             });
         }
 
+
+        function apagarArquivosSolicitacao(idArquivo) {
+
+ 
+            var formData = {
+                solicitacao,
+                txtEmailParaEnvioArquivo: $('#txtEmailParaEnvioArquivo').val(),
+                apagarArquivoAtendente: '1'
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/arquivosController.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+
+            }).done(function(data) {
+
+                $('#tabelaArquivos').html(data);
+
+                $('#retorno').foundation('open');
+            });
+        }
+
+
+
+
         function exbirArquivosDaSolicitacao(solicitacao) {
-
-
 
             var formData = {
                 solicitacao,
                 listarArquivosAtendente: '1'
             }
-
-
-
             $.ajax({
                 type: 'POST',
                 url: 'ajax/solicitacaoControllerAtendente.php',
