@@ -13,14 +13,6 @@
         <input type="file" id="fileInput" name="file" />
         <button type="button" id="uploadButton" onclick="subirArquivo('file','fileInput')">Upload</button>
 
-        <hr>
-
-        <input type="file" id="fileInput0" name="file0" />
-        <button type="button" id="uploadButton" onclick="subirArquivo('file0','fileInput0')">Upload</button>
-
-
-
-
     </form>
 
     <script>
@@ -40,7 +32,10 @@
                     data: formData,
                     processData: false,
                     contentType: false,
+                    dataType: 'html',
                     success: function(response) {
+                        console.log(response);
+
 
                         $(`#${id}`).attr('disabled', 'disabled');
 

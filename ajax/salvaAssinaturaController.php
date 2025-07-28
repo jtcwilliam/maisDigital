@@ -16,6 +16,11 @@ if (isset($_POST['verificarAssinatura'])  &&  $_POST['verificarAssinatura']) {
 
     $assinaturaAtiva =     $objSolicitacao->pesquisarAssinatura($_POST['idSolicitacao']);
 
+   
+
+
+
+
 
 
     //    print_r($assinaturaAtiva[0]['statusSolicitacao']);
@@ -34,6 +39,7 @@ if (isset($_POST['verificarAssinatura'])  &&  $_POST['verificarAssinatura']) {
 if (isset($_POST['finalizaSolicitacao'])  &&  $_POST['finalizaSolicitacao']) {
 
     $assinaturaAtiva =     $objSolicitacao->pesquisarAssinatura($_POST['idSolicitacao']);
+ 
 
 ?>
 

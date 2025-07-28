@@ -8,82 +8,6 @@ $objArquivo = new Arquivo();
 $objDOcumento = new Documentos();
 
 
-
-//controller que delete o arquivo e informa ao cidadão
-if (isset($_POST['apagarArquivoAtendente'])) {
-
-    //conteudo da mensagem do email
-
-    ob_start();
-
-?>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    </head>
-
-    <body style="font-family: Arial, Helvetica, sans-serif;">
-        <center>
-            <h2>Olá <?= $nome ?> . Somos Equie Mais Digital da Prefeitura de Guarulhos </h2>
-
-            <p>O arquivo XXff que foi anexo a sua solicitação está errado. Clique no link que enviamos neste email para fazer a
-                alteração adequada e prosseguirmos para a conclusão de sua solicitação<br> <b>Observação:</b> Está solicitação permanecerá
-                sem prosseguimento, até que você faça esta correção. </p>
-
-
-
-
-            <a style="color: green; text-decoration: none; font-style: italic;"
-                href="#" target="_blank">
-                <h2>Clique aqui para alterar o Arquivo xxff</h2>
-            </a>
-            <br>
-
-            <h4> Estamos á Disposição!<br>
-
-                <b>Equipe Mais Digital</b>
-                <h2> Prefeitura de Guarulhos</h2>
-            </h4>
-
-
-
-
-
-        </center>
-    </body>
-
-    </html>
-    <?php
-    $dados = ob_get_contents();
-    ob_end_clean();
-
-
-    //fim do conteudo da mensagem do email
-
-    include_once '../classes/Envio.php';
-    $objEnvio = new Envio();
-
-    $objEnvio->setDestinatario($_POST['txtEmailParaEnvioArquivo']);
-    $objEnvio->setAssunto('Alteração de Arquivo na sua solicitação');
-    $objEnvio->setConteudo($dados);
-
-    if ($objEnvio->envioEmail()) {
-
-        return true;
-    }
-
-    exit();
-}
-
-
-
-
-
-
 if (isset($_POST['criaCampoArquivo'])) {
 
     $criarCaixaArquivo =  $objDOcumento->trazerDocumentoArquivo($_POST['idServico']);
@@ -94,17 +18,9 @@ if (isset($_POST['criaCampoArquivo'])) {
     echo   "   <input type='hidden' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
 
 
-
-
-
-
-
-
-
-
     $i = 0;
     foreach ($criarCaixaArquivo as $key => $value) {
-    ?>
+?>
 
 
         <div class=" grid-x  grid-padding-x " style="width: 100%;   ">
@@ -151,67 +67,125 @@ if (isset($_POST['criaCampoArquivo'])) {
         $('.mensagemB').hide();
     </script>
 
-<?php
+    <?php
     die();
 }
 
 
 
 
+//controller que delete o arquivo e informa ao cidadão
+if (isset($_POST['apagarArquivoAtendente'])) {
+
+    $objArquivo->setIdArquivo($_POST['idArquivo']);
+    if ($objArquivo->apagarArquivo()) {
+        ob_start();
+
+    ?>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        </head>
+
+        <body style="font-family: Arial, Helvetica, sans-serif;">
+            <center>
+                <h2>Olá <?= $_POST['txtNomePessoaParaEnvioArquivo'] ?> . Somos Equie Mais Digital da Prefeitura de Guarulhos </h2>
+
+                <p style="font-size: 1.2em;">O arquivo <b><?= $_POST['nomeArquivo'] ?> </b> que foi anexo a sua solicitação está errado.
+                    <br>Clique no link que enviamos neste email para fazer a
+                    alteração adequada e prosseguirmos para a conclusão de sua solicitação<br> <b>Observação:</b> Está solicitação permanecerá
+                    sem prosseguimento, até que você faça esta correção.
+                </p>
 
 
 
-$tipo = $_FILES['file']['type'];
 
-$nomeArquivo = $_POST['nomeArquivo'];
+                <a style="color: green; text-decoration: none; font-style: italic;"
+                    href="http://localhost:8888/maisDigital/carregarArquivoSolicitacao.php?idArquivo=<?= $_POST['idArquivo'] ?>" target="_blank">
+                    <h2>Clique aqui para alterar o Arquivo <?= $_POST['nomeArquivo'] ?> </h2>
+                </a>
+                <br>
 
-include_once '../classes/Sanitizar.php';
+                <h4> Estamos á Disposição!<br>
 
-$nomeArquivoSize =  $_POST['nomeArquivo'];
-if (strlen($nomeArquivoSize) >= 180) {
-    $nomeArquivo = substr($nomeArquivoSize, 0, 180);
-}
-
-$nomeArquivo =  $nomeArquivo;
-
-
-
-$file = file_get_contents($_FILES['file']['tmp_name']);
-
-$arquivoTipo =  $_FILES['file']['type'];
-
-
-$objArquivo->setTipoArquivo($arquivoTipo);
-
-$objArquivo->setNomeArquivo($nomeArquivo);
-
-$objArquivo->setIdSolicitacao($_POST['idSolicitacao']);
-
-$objArquivo->setStatusArquivo('1');
-
-$objArquivo->setArquivo($file);
-
-
-$carregarFinalizaUP = 1;
-if ($objArquivo->inserirArquivos()) {
+                    <b>Equipe Mais Digital</b>
+                    <h2> Prefeitura de Guarulhos</h2>
+                </h4>
 
 
 
-    /*
-    $objQtdeArquivo = $objArquivo->consultarQuantidadeArquivo($_POST['idSolicitacao']);
-    $objArquivo = count($objQtdeArquivo);
 
-    $qtdeArquivosServico =  $_POST['idQuantidadeArquivoDoServico'];
 
-    if ($objArquivo == $qtdeArquivosServico) {
-        $carregarFinalizaUP = true;
-    }else{
-        $carregarFinalizaUP = false;
+            </center>
+        </body>
+
+        </html>
+<?php
+        $dados = ob_get_contents();
+        ob_end_clean();
+
+
+        //fim do conteudo da mensagem do email
+
+        include_once '../classes/Envio.php';
+        $objEnvio = new Envio();
+
+        $objEnvio->setDestinatario($_POST['txtEmailParaEnvioArquivo']);
+        $objEnvio->setAssunto('Alteração de Arquivo na sua solicitação');
+        $objEnvio->setConteudo($dados);
+
+        if ($objEnvio->envioEmail()) {
+
+            echo json_encode(array('retorno' => true));
+        }
     }
 
-    echo json_encode(array('retorno' => true, 'carregarBotaoFinaliza' => $carregarFinalizaUP));
 
-    */
 
-    echo json_encode(array('retorno' => true));
+
+    exit();
+}
+
+
+if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante'])) {
+
+
+    $tipo = $_FILES['file']['type'];
+
+ 
+
+
+    $file = file_get_contents($_FILES['file']['tmp_name']);
+ 
+
+
+
+        
+
+
+    $objArquivo->setIdArquivo($_POST['idArquivo']);
+
+    $objArquivo->setArquivo($file);
+
+
+
+
+
+
+
+ 
+
+    $carregarFinalizaUP = 1;
+    if ($objArquivo->atualizarAquivoSolicitacao()) {
+
+
+
+        echo json_encode(array('retorno' => true));
+    }
+
+    exit();
 }

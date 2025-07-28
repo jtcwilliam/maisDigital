@@ -56,10 +56,7 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
     <?php
 
-    echo '<pre>';
-    print_r($_SESSION);
-    echo '</pre>';
-
+ 
 
     ?>
 
@@ -204,26 +201,32 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
         }
 
 
-        function apagarArquivosSolicitacao(idArquivo) {
+        function apagarArquivosSolicitacao(idArquivo, nomeArquivo) {
 
- 
+
             var formData = {
-                solicitacao,
+                idArquivo,
+                nomeArquivo,
                 txtEmailParaEnvioArquivo: $('#txtEmailParaEnvioArquivo').val(),
+
+                txtNomePessoaParaEnvioArquivo: $('#txtNomePessoaParaEnvioArquivo').val(),
                 apagarArquivoAtendente: '1'
             }
             $.ajax({
                 type: 'POST',
                 url: 'ajax/arquivosController.php',
                 data: formData,
-                dataType: 'html',
+                dataType: 'json',
                 encode: true
 
             }).done(function(data) {
 
-                $('#tabelaArquivos').html(data);
+                if (data.retorno == true) {
+                    alert('Arquivo deletado e informação enviada ao solicitante');
+                }
 
-                $('#retorno').foundation('open');
+
+
             });
         }
 

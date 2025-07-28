@@ -14,6 +14,7 @@ class Arquivo
     private $arquivo;
 
     private $pdoConn;
+    private $idArquivo;
     private $nomeArquivo;
     private $tipoArquivo;
     private $idSolicitacao;
@@ -35,8 +36,6 @@ class Arquivo
     public function  consultarDadosArquivosParaInfo($idSolicitacao)
     {
         try {
-
-
 
             $pdo = $this->getPdoConn();
 
@@ -63,12 +62,10 @@ class Arquivo
 
             $pdo = $this->getPdoConn();
 
-            $stmt = $pdo->prepare(" select arquivo, nomeArquivo, tipoArquivo  from arquivos where idarquivo =".$idArquivo);
+            $stmt = $pdo->prepare(" select arquivo, nomeArquivo, tipoArquivo  from arquivos where idarquivo =" . $idArquivo);
 
 
             $stmt->execute();
-
-
 
             $datasDisponiveis = $stmt->fetchAll();
 
@@ -82,8 +79,6 @@ class Arquivo
     public function  solicitarArquivoRelatorio($idSolicitacao)
     {
         try {
-
-
 
             $pdo = $this->getPdoConn();
 
@@ -120,19 +115,13 @@ class Arquivo
     {
         try {
 
-
-
             $pdo = $this->getPdoConn();
 
             $stmt = $pdo->prepare("  select   nomeArquivo, tipoArquivo, arquivo from arquivos where idsolicitacao =" . $idSolicitacao);
 
-
             $stmt->execute();
 
-
-
             $datasDisponiveis = $stmt->fetchAll();
-
 
             return $datasDisponiveis;
         } catch (PDOException $e) {
@@ -168,6 +157,7 @@ class Arquivo
     {
         try {
 
+
             $pdo = $this->getPdoConn();
 
             //$pdo = new PDO("mysql:host='" . $host . "' ;dbname='" . $db . "', '" . $user, $password);
@@ -191,6 +181,8 @@ class Arquivo
             $stmt->bindParam(4,  $idSolicitacao, PDO::PARAM_LOB);
             $stmt->bindParam(5,  $statusArquivo, PDO::PARAM_LOB);
 
+            print_r($stmt);
+
 
             if ($stmt->execute()) {
                 return true;
@@ -199,6 +191,74 @@ class Arquivo
             echo 'Error: ' . $e->getMessage();
         }
     }
+
+
+    public function  apagarArquivo()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            //$pdo = new PDO("mysql:host='" . $host . "' ;dbname='" . $db . "', '" . $user, $password);
+            //    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $idArquivo =   $this->getIdArquivo();
+
+
+
+
+
+            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = 'kl'  where idArquivo = ? ");
+
+
+            //corrigir isto aqui
+            $stmt->bindParam(1,  $idArquivo, PDO::PARAM_LOB);
+
+
+
+            if ($stmt->execute()) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function  atualizarAquivoSolicitacao()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            //$pdo = new PDO("mysql:host='" . $host . "' ;dbname='" . $db . "', '" . $user, $password);
+            //    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $idArquivo =   $this->getIdArquivo();
+            $arquivo = $this->getArquivo();
+
+
+
+
+
+
+            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = ?  where idArquivo = ? ");
+
+
+            //corrigir isto aqui
+            $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(2,  $idArquivo, PDO::PARAM_LOB);
+            
+
+
+
+            if ($stmt->execute()) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 
 
 
@@ -398,6 +458,26 @@ class Arquivo
     public function setStatusArquivo($statusArquivo)
     {
         $this->statusArquivo = $statusArquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idArquivo
+     */
+    public function getIdArquivo()
+    {
+        return $this->idArquivo;
+    }
+
+    /**
+     * Set the value of idArquivo
+     *
+     * @return  self
+     */
+    public function setIdArquivo($idArquivo)
+    {
+        $this->idArquivo = $idArquivo;
 
         return $this;
     }

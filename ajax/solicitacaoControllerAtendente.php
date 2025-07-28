@@ -52,7 +52,7 @@ if (isset($_POST['listarArquivosAtendente'])) {
                         <td>' . $value['nomeArquivo'] . '</td>
                         <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo=' . $value['idArquivo'] . '" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
                         <td><center>  <h4><i class="fi-check large"></i></h4> </center> </td>
-                        <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $value['idArquivo'] . ')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
+                        <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $value['idArquivo'] . ', \''. $value['nomeArquivo'].'\')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
                     
                     
                     
@@ -110,6 +110,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-4 cell">
                 <label style="color: #56658E; font-size: 1.1em; ">Nome do Solicitante</label>
+                <input type="text" value="<?= $assinaturaAtiva[0]['nomePessoa'] ?>"   id="txtNomePessoaParaEnvioArquivo" />
                 <p><?= $assinaturaAtiva[0]['nomePessoa'] ?> </p>
             </div>
             <div class="small-12 large-4 cell">

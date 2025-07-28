@@ -55,12 +55,12 @@
             formData.append('idQuantidadeArquivoDoServico', idQuantidadeArquivoDoServico);
 
             $.ajax({
-                url: 'ajax/arquivosController.php', // Replace with your server endpoint
+                url: 'ajax/gravarArquivoController.php', // Replace with your server endpoint
                 type: 'POST',
                 data: formData,
                 processData: false,
                 contentType: false,
-                dataType: 'json',
+                dataType: 'html',
                 success: function(response) {
                     console.log(response);
 
