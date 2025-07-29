@@ -110,7 +110,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-4 cell">
                 <label style="color: #56658E; font-size: 1.1em; ">Nome do Solicitante</label>
-                <input type="text" value="<?= $assinaturaAtiva[0]['nomePessoa'] ?>"   id="txtNomePessoaParaEnvioArquivo" />
+                <input type="hidden" value="<?= $assinaturaAtiva[0]['nomePessoa'] ?>"   id="txtNomePessoaParaEnvioArquivo" />
                 <p><?= $assinaturaAtiva[0]['nomePessoa'] ?> </p>
             </div>
             <div class="small-12 large-4 cell">
@@ -120,7 +120,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-4 cell">
                 <label style="color: #56658E; font-size: 1.1em; ">Email do Solicitante</label>
-                <input type="text" value="<?= $assinaturaAtiva[0]['emailUsuario'] ?>"   id="txtEmailParaEnvioArquivo" />
+                <input type="hidden" value="<?= $assinaturaAtiva[0]['emailUsuario'] ?>"   id="txtEmailParaEnvioArquivo" />
                 <p><?= $assinaturaAtiva[0]['emailUsuario'] ?></p>
             </div>
 

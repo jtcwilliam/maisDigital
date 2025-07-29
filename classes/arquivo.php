@@ -208,7 +208,7 @@ class Arquivo
 
 
 
-            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = 'kl'  where idArquivo = ? ");
+            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = 'kl', tipoArquivo = 'kl'  where idArquivo = ? ");
 
 
             //corrigir isto aqui
@@ -235,18 +235,20 @@ class Arquivo
 
             $idArquivo =   $this->getIdArquivo();
             $arquivo = $this->getArquivo();
+            $tipoArquivo = $this->getTipoArquivo();
 
 
 
 
 
 
-            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = ?  where idArquivo = ? ");
+            $stmt = $pdo->prepare("  UPDATE arquivos set arquivo = ?, tipoArquivo=?  where idArquivo = ? ");
 
 
             //corrigir isto aqui
             $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
-            $stmt->bindParam(2,  $idArquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(2,  $tipoArquivo, PDO::PARAM_STR);
+            $stmt->bindParam(3,  $idArquivo, PDO::PARAM_INT);
             
 
 

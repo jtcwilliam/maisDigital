@@ -11,9 +11,11 @@ use setasign\Fpdi\Fpdi;
 
 $objArquivo = new Arquivo();
 
-$dadosSolicitacao = $objArquivo->solicitarArquivoRelatorio(196);
+$idSolicitacao = $_GET['idSolicitacao'];
 
-$arquivos = $objArquivo->consultarArquivoParaSolicitacao(196);
+$dadosSolicitacao = $objArquivo->solicitarArquivoRelatorio($idSolicitacao);
+
+$arquivos = $objArquivo->consultarArquivoParaSolicitacao($idSolicitacao);
 
 
  

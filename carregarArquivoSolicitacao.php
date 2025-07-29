@@ -1,7 +1,6 @@
 <?php
 
 if (session_start()) {
- 
 }
 
 
@@ -145,81 +144,7 @@ include_once 'includes/head.php';
 
 
 
-    <!-- modal de termo de uso -->
-    <div class="large reveal" id="termoUso" data-reveal style="background-color:white;">
-        <div style="  padding-top: 0px;">
-            <div style="color: black; text-align: justify; padding-left: 10px; padding-right: 10px; ">
-                <h4><b>Termos de Uso do "Agenda Fácil" - versão 1.0</b></h4>
 
-
-
-
-                <p><b>1.⁠ ⁠OBJETIVO</b><br>
-                    Estabelecer as condições de uso do Sistema de Agendamento Online das unidades da “Rede Fácil” do Departamento de Atendimento ao Cidadão, subordinado à Secretaria de Gestão da Prefeitura do Município de Guarulhos/SP, garantindo transparência, segurança e conformidade com a Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018) e com boas práticas do serviço público.
-                </p>
-
-                <p>
-                    <b>2.⁠ ⁠FUNCIONALIDADE DO SISTEMA</b><br>
-
-                    O sistema permite que cidadãos realizem agendamento online para atendimentos presenciais nas unidades do Fácil. Existem duas formas de acesso disponíveis:
-                <ul>
-                    <li>Acesso Simplificado: requer apenas o nome completo e o CPF do cidadão.</li>
-                    <li>⁠Acesso Autenticado: requer nome completo, CPF e senha cadastrada, oferecendo maior segurança e controle.</li>
-
-
-                    <li>O cidadão pode escolher livremente entre as duas opções para realizar seus agendamentos.</li>
-
-                </ul>
-                </p>
-
-                <P>
-                    <b>3.⁠ ⁠REGRAS DE USO</b>
-                <ul>
-                    <li>⁠ ⁠O usuário deve fornecer informações verdadeiras, completas e atualizadas no momento do agendamento;</li>
-                    <li>⁠ ⁠Cada CPF pode manter até 2 agendamentos ativos simultaneamente;</li>
-                    <li>⁠ ⁠O não comparecimento ao agendamento, sem justificativa, poderá resultar em bloqueio temporário para novos agendamentos;</li>
-                    <li>⁠ ⁠Caso o usuário atinja o limite de agendamentos e não consiga realizar nova marcação, será necessário comparecer pessoalmente a uma unidade Fácil para solicitar a liberação.</li>
-                    <li>⁠ ⁠Os agendamentos são pessoais e intransferíveis, logo, o usuário não deve compartilhar senhas ou acessos terceirizados;</li>
-                    <li>⁠ ⁠O usuário não deve utilizar o sistema para fins ilegais ou fraudulentos. </li>
-                </ul>
-                </p>
-
-                <p><b>
-                        4.⁠ ⁠TRATAMENTO DE DADOS PESSOAIS (LGPD)<br></b>
-                    Os dados coletados (nome e CPF, e senha opcional no caso do acesso autenticado) são utilizados exclusivamente para controle de agendamentos e identificação do cidadão. São armazenados em ambiente seguro, com acesso restrito, conforme determina a LGPD – Lei nº 13.709/2018.
-                </p>
-
-                <p><b>
-                        5.⁠ ⁠SEGURANÇA DA INFORMAÇÃO</b>
-                    O sistema conta com criptografia, camadas de segurança para proteger os dados armazenados.
-                </p>
-
-
-
-                <p><b>
-                        6.⁠ ⁠ACEITE</b><br>
-
-                    Ao utilizar o sistema, o usuário declara estar ciente e de acordo com os termos descritos neste documento, inclusive quanto ao uso e tratamento dos dados pessoais conforme a LGPD – Lei nº 13.709/2018.
-                </p>
-
-            </div>
-
-            <center>
-                <a class="button " data-close aria-label="Close modal" style="  border-radius: 10px   ; color:rgb(255, 255, 255); font-weight: bold;">
-                    <h5 style="color:rgb(255, 255, 255);">Clique aqui para Fechar</h5>
-                </a>
-            </center>
-
-
-        </div>
-    </div>
-
-
-
-    <button class="close-button" type="button">
-        <span aria-hidden="true"></span>
-    </button>
-    </div>
 
 
 
@@ -294,13 +219,19 @@ include_once 'includes/head.php';
                         <br>
 
                         <div id="todosContainers">
+                            
                             <form id="fileUploadForm">
-                                <input type="file" id="fileInput" name="file" />
+                                <input class="button" style="background-color: #28536b;" type="file" id="fileInput" name="file" value="" />
 
-                                <input type="text" value="<?= $_GET['idArquivo'] ?>" id="idArquivo" name="idArquivo" />
+                                <center>
+                                    <input type="hidden" value="<?= $_GET['idArquivo'] ?>" id="idArquivo" name="idArquivo" />
+                                </center>
 
 
-                                <button class="button" type="button" id="uploadButton" onclick="subirArquivo('file','fileInput')">Upload</button>
+                                <center>
+                                    <button class="button" type="button" id="uploadButton" style="width: 100%;" onclick="subirArquivo('file','fileInput')">Clique aqui para gravar o novo Arquivo</button>
+
+                                </center>
 
                             </form>
 

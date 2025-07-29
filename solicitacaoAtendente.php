@@ -56,7 +56,7 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
     <?php
 
- 
+
 
     ?>
 
@@ -157,6 +157,16 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                         <h4>Aprovar Solicitação </h4>
                     </div>
                 </div>
+
+                <div class="grid-x  grid-padding-x">
+                    <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <h2><i class="fi-page-multiple large"></i></h2>
+                    </div>
+                    <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
+                        <a target="_blank" href="relatorio.php?idSolicitacao=<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>"> <h4>Relatório </h4></a>
+                    </div>
+                </div>
+
                 <div class="grid-x  grid-padding-x">
                     <div class="small-1 cell" style="   display: inline; align-content: center; text-align: justify;color: #56658E">
                         <h2><i class="fi-page-copy large"></i></h2>

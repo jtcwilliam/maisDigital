@@ -164,8 +164,8 @@ if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante'])) {
 
 
 
-        
 
+    $objArquivo->setTipoArquivo($tipo);
 
     $objArquivo->setIdArquivo($_POST['idArquivo']);
 
