@@ -15,7 +15,8 @@ if (isset($_POST['criaCampoArquivo'])) {
     $quantidadeArquivos =  count($criarCaixaArquivo);
 
     //verificar quantos arquivos tem anexos a este serviço;
-    echo   "   <input type='hidden' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
+    echo   "   <input type='text' id='idQuantidadeArquivoDoServico'  value='$quantidadeArquivos'/>";
+    
 
 
     $i = 0;
@@ -43,8 +44,10 @@ if (isset($_POST['criaCampoArquivo'])) {
             </div>
             <div class="small-12 large-9 cell">
                 <label>
+                    <!-- campo que pega o tipo do documento para ser gravado no arquivo -->
+                       <input type='text' id='idTipoDocumento<?= $i ?>'  value='<?=$value['idDocumento']  ?>'/>
                     <button type="button" id="uploadButton<?= $i ?>" class="button " style="width: 100%; text-align: justify;  height: 3em;"
-                        onclick="subirArquivo('file<?= $i ?>','fileInput<?= $i ?>', 'mensagem<?= $i ?>',   ' <?= $value['descricaoDoc'] ?> ', 'uploadButton<?= $i ?>', 'caixa<?= $i ?>', $('#idQuantidadeArquivoDoServico').val() )  ">
+                        onclick="subirArquivo('file<?= $i ?>','fileInput<?= $i ?>', 'mensagem<?= $i ?>',   ' <?= $value['descricaoDoc'] ?> ', 'uploadButton<?= $i ?>', 'caixa<?= $i ?>', $('#idQuantidadeArquivoDoServico').val(),  $('#idTipoDocumento<?= $i ?>').val() )  ">
                         Clique para carregar o <b><i>"<?= $value['descricaoDoc'] ?>"</i></b>
                     </button>
                 </label>

@@ -64,15 +64,32 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
     <div class="grid-x grid-padding-x">
         <div class="small-12 large-12 cell">
-            <div class="large reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
+            <div class="full reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
                 <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
+
+
+                    <div class="grid-x grid-padding-x">
+                        <div class="small-12 large-6 cell">
+                            Nome do Arquivo
+                        </div>
+                        <div class="small-12 large-2 cell">
+                            Alterar Arquivo
+                        </div>
+                        <div class="small-12 large-2 cell">
+                            Upload Necessário
+                        </div>
+                        <div class="small-12 large-2 cell">
+                            Visualizar Arquivo
+                        </div>
+                    </div>
+
 
                     <table class="table" style="width: 1000px">
                         <thead>
                             <tr>
 
-                                <th width="5%">Tipo</th>
-                                <th width="65%">Nome do Arquivo</th>
+
+                                <th width="70%">Nome do Arquivo</th>
                                 <th width="10%">
                                     <center>Visualizar Arquivo</center>
                                 </th>
@@ -90,6 +107,10 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
                         </tbody>
                     </table>
+
+                    <div id="tabelaArquivos">
+
+                    </div>
 
 
                 </div>
@@ -163,7 +184,9 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                         <h2><i class="fi-page-multiple large"></i></h2>
                     </div>
                     <div class="small-11 cell" style="display: inline; align-content: center; text-align: justify;color: #56658E">
-                        <a target="_blank" href="relatorio.php?idSolicitacao=<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>"> <h4>Relatório </h4></a>
+                        <a target="_blank" href="relatorio.php?idSolicitacao=<?= $_GET['89a2e8ef07b59a9a87135b9e2fe979d4b40a616d'] ?>">
+                            <h4>Relatório </h4>
+                        </a>
                     </div>
                 </div>
 

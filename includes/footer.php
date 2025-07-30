@@ -41,7 +41,9 @@
 
 
     // funçõa para upload
-    function subirArquivo(arquivo, id, mensagem, texto, botaoRetorno, caixa, idQuantidadeArquivoDoServico) {
+    function subirArquivo(arquivo, id, mensagem, texto, botaoRetorno, caixa, idQuantidadeArquivoDoServico, idTipoDocumento) {
+
+        
 
         var formData = new FormData();
         var file = $(`#${id}`)[0].files[0];
@@ -53,6 +55,7 @@
             formData.append('idSolicitacao', idSolicitacao);
             formData.append('nomeArquivo', texto);
             formData.append('idQuantidadeArquivoDoServico', idQuantidadeArquivoDoServico);
+            formData.append('idTipoDocumento', idTipoDocumento);
 
             $.ajax({
                 url: 'ajax/gravarArquivoController.php', // Replace with your server endpoint

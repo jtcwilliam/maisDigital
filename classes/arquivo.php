@@ -19,6 +19,8 @@ class Arquivo
     private $tipoArquivo;
     private $idSolicitacao;
     private $statusArquivo;
+    private $estiloArquivo;
+    private $idTipoDocumento;
 
     function __construct()
     {
@@ -33,13 +35,63 @@ class Arquivo
     }
 
 
+    public function  consultarListaAquivosNecessarios($idSolicitacao)
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare("  select * from servicoDocumento sd inner join documentos dc on dc.idDoc = sd.idDocumento
+                                where idServico in(
+                                select 
+                                assuntoSolicitacao from solicitacao sl inner join linkCartaServico lcs on sl.assuntoSolicitacao = lcs.idlinkCartaServico
+                                where idsolicitacao =  " . $idSolicitacao . ")");
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
     public function  consultarDadosArquivosParaInfo($idSolicitacao)
     {
         try {
 
             $pdo = $this->getPdoConn();
 
-            $stmt = $pdo->prepare("  select  idArquivo ,nomeArquivo, tipoArquivo  from arquivos where idsolicitacao =" . $idSolicitacao);
+            $stmt = $pdo->prepare("  select  idArquivo ,nomeArquivo, tipoArquivo, idTipoDocumento  from arquivos where idsolicitacao =" . $idSolicitacao);
+
+
+            $stmt->execute();
+
+
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function  consultaArquivosParaComuniquese($idSolicitacao, $idTipoDocumento)
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare("  select  idArquivo ,nomeArquivo, tipoArquivo, idTipoDocumento 
+             from arquivos where idsolicitacao =" . $idSolicitacao . "   and  idTipoDocumento=" . $idTipoDocumento);
 
 
             $stmt->execute();
@@ -168,10 +220,11 @@ class Arquivo
             $nomeArquivo = $this->getNomeArquivo();
             $idSolicitacao = $this->getIdSolicitacao();
             $statusArquivo = $this->getStatusArquivo();
+            $idTipoDocumento = $this->getIdTipoDocumento();
 
 
 
-            $stmt = $pdo->prepare("  INSERT INTO  arquivos ( arquivo, tipoArquivo, nomeArquivo, idSolicitacao, statusArquivo   )   values (?,?,?,?,?) ");
+            $stmt = $pdo->prepare("  INSERT INTO  arquivos ( arquivo, tipoArquivo, nomeArquivo, idSolicitacao, statusArquivo, idTipoDocumento   )   values (?,?,?,?,?, ?) ");
 
 
             //corrigir isto aqui
@@ -180,8 +233,9 @@ class Arquivo
             $stmt->bindParam(3,  $nomeArquivo, PDO::PARAM_LOB);
             $stmt->bindParam(4,  $idSolicitacao, PDO::PARAM_LOB);
             $stmt->bindParam(5,  $statusArquivo, PDO::PARAM_LOB);
+            $stmt->bindParam(6,  $idTipoDocumento, PDO::PARAM_LOB);
 
-            print_r($stmt);
+
 
 
             if ($stmt->execute()) {
@@ -249,7 +303,7 @@ class Arquivo
             $stmt->bindParam(1,  $arquivo, PDO::PARAM_LOB);
             $stmt->bindParam(2,  $tipoArquivo, PDO::PARAM_STR);
             $stmt->bindParam(3,  $idArquivo, PDO::PARAM_INT);
-            
+
 
 
 
@@ -480,6 +534,46 @@ class Arquivo
     public function setIdArquivo($idArquivo)
     {
         $this->idArquivo = $idArquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of estiloArquivo
+     */
+    public function getEstiloArquivo()
+    {
+        return $this->estiloArquivo;
+    }
+
+    /**
+     * Set the value of estiloArquivo
+     *
+     * @return  self
+     */
+    public function setEstiloArquivo($estiloArquivo)
+    {
+        $this->estiloArquivo = $estiloArquivo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idTipoDocumento
+     */
+    public function getIdTipoDocumento()
+    {
+        return $this->idTipoDocumento;
+    }
+
+    /**
+     * Set the value of idTipoDocumento
+     *
+     * @return  self
+     */
+    public function setIdTipoDocumento($idTipoDocumento)
+    {
+        $this->idTipoDocumento = $idTipoDocumento;
 
         return $this;
     }

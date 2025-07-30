@@ -1,16 +1,16 @@
 <?php
 
 include_once '../classes/arquivo.php';
- 
+
 
 $objArquivo = new Arquivo();
- 
+
 
 $tipo = $_FILES['file']['type'];
 
 $nomeArquivo = $_POST['nomeArquivo'];
- 
-echo 'entrou aqui';
+
+
 
 include_once '../classes/Sanitizar.php';
 
@@ -28,6 +28,8 @@ $file = file_get_contents($_FILES['file']['tmp_name']);
 
 $arquivoTipo =  $_FILES['file']['type'];
 
+$idTipoDocumento = $_POST['idTipoDocumento'];
+
 
 $objArquivo->setTipoArquivo($arquivoTipo);
 
@@ -39,6 +41,7 @@ $objArquivo->setStatusArquivo('1');
 
 $objArquivo->setArquivo($file);
 
+$objArquivo->setIdTipoDocumento($idTipoDocumento);
 
 $carregarFinalizaUP = 1;
 if ($objArquivo->inserirArquivos()) {

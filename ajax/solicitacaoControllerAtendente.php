@@ -15,49 +15,74 @@ $objArquivo = new Arquivo();
 if (isset($_POST['listarArquivosAtendente'])) {
 
 
-    $arquivo = $objArquivo->consultarDadosArquivosParaInfo($_POST['solicitacao']);
-?>
+
+
+    $arquivosNecessarios = $objArquivo->consultarListaAquivosNecessarios($_POST['solicitacao']);
 
 
 
-    <?php
+
+
+
+    foreach ($arquivosNecessarios as $key => $value) { ?>
 
 
 
 
-    foreach ($arquivo as $key => $value) {
-
-        switch ($value['tipoArquivo']) {
-            case 'image/jpeg':
-                $img = '<h4><i class="fi-photo large"></i></h4>';
-                break;
-
-            case 'image/png':
-                $img = '<h4><i class="fi-photo large"></i></h4>';
-                break;
-
-            case 'application/pdf':
-                $img = '<h4><i class="fi-page-pdf large"></i></h4>';
-                break;
-
-            default:
-                # code...
-                break;
-        }
+        <?php
 
 
+        $arquivos = $objArquivo->consultaArquivosParaComuniquese($_POST['solicitacao'], $value['idDocumento']);
 
-        echo '  <tr>
-                        <td>' . $img  . '</td>
-                        <td>' . $value['nomeArquivo'] . '</td>
-                        <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo=' . $value['idArquivo'] . '" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
+
+        if (empty($arquivos)) {
+            echo '   <tr>
+
+
+                                <td width="70%">' .  $value['descricaoDoc'] . '</td>
+                                <td width="10%">
+                                    <center>Visualizar Arquivo</center>
+                                </td>
+                                <td width="10%">
+                                    <center>Validar arquivo</center>
+                                </td>
+                                <td width="10%">
+                                    <center>Excluir Arquivo</center>
+                                </td>
+
+                            </tr>';
+        } else {
+            echo '  <tr>
+                        
+                        <td>' . $arquivos[0]['nomeArquivo'] . '</td>
+                        <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo=' . $arquivos[0]['idArquivo'] . '" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
                         <td><center>  <h4><i class="fi-check large"></i></h4> </center> </td>
-                        <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $value['idArquivo'] . ', \''. $value['nomeArquivo'].'\')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
+                        <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $arquivos[0]['idArquivo'] . ', \'' . $arquivos[0]['nomeArquivo'] . '\')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
                     
                     
                     
                 </tr>';
+        }
+
+
+
+
+
+        ?>
+
+
+
+    <?php
     }
+
+
+
+
+
+
+
+
+
 
 
     exit();
@@ -110,7 +135,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-4 cell">
                 <label style="color: #56658E; font-size: 1.1em; ">Nome do Solicitante</label>
-                <input type="hidden" value="<?= $assinaturaAtiva[0]['nomePessoa'] ?>"   id="txtNomePessoaParaEnvioArquivo" />
+                <input type="hidden" value="<?= $assinaturaAtiva[0]['nomePessoa'] ?>" id="txtNomePessoaParaEnvioArquivo" />
                 <p><?= $assinaturaAtiva[0]['nomePessoa'] ?> </p>
             </div>
             <div class="small-12 large-4 cell">
@@ -120,7 +145,7 @@ if (isset($_POST['exibirSolicitacaoAtendente'])) {
 
             <div class="small-12 large-4 cell">
                 <label style="color: #56658E; font-size: 1.1em; ">Email do Solicitante</label>
-                <input type="hidden" value="<?= $assinaturaAtiva[0]['emailUsuario'] ?>"   id="txtEmailParaEnvioArquivo" />
+                <input type="hidden" value="<?= $assinaturaAtiva[0]['emailUsuario'] ?>" id="txtEmailParaEnvioArquivo" />
                 <p><?= $assinaturaAtiva[0]['emailUsuario'] ?></p>
             </div>
 
