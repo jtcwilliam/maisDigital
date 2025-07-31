@@ -39,29 +39,34 @@ if (isset($_POST['listarArquivosAtendente'])) {
             echo '   <tr>
 
 
+            <td width="15%"> 
+            Nulo </td>
                                 <td width="70%">' .  $value['descricaoDoc'] . '</td>
                                 <td width="10%">
-                                    <center>Visualizar Arquivo</center>
+                                    <center> - </center>
                                 </td>
                                 <td width="10%">
-                                    <center>Validar arquivo</center>
+                                
+                                    <center><a onclick="$(\'#aquivoPraSolicitar\').val(' .  $value['idDocumento'] . ');  $(\'#modalComunicaArquivo\').foundation(\'open\');">  <h4><i class="fi-megaphone large"></i></h4></a> </center> 
                                 </td>
                                 <td width="10%">
-                                    <center>Excluir Arquivo</center>
+                                    <center> - </center>
                                 </td>
 
                             </tr>';
         } else {
             echo '  <tr>
-                        
+                        <td width="15%"> Enviado </td>
                         <td>' . $arquivos[0]['nomeArquivo'] . '</td>
                         <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo=' . $arquivos[0]['idArquivo'] . '" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
-                        <td><center>  <h4><i class="fi-check large"></i></h4> </center> </td>
+                        <td> <center>-</center>  </td>
                         <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $arquivos[0]['idArquivo'] . ', \'' . $arquivos[0]['nomeArquivo'] . '\')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
                     
                     
                     
                 </tr>';
+
+            //
         }
 
 

@@ -60,6 +60,28 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
     ?>
 
+    <div class="grid-x grid-padding-x">
+        <div class="small-12 large-12 cell">
+
+            <div class=" large reveal" id="modalComunicaArquivo" data-reveal style="padding: 60px   ;background-color: rgb(231, 228, 220);">
+
+                <h1>Comunicado ao Cidadão</h1>
+                <h4>Solicitar Envio de Arquivo</h4>
+                <input type="text" id="aquivoPraSolicitar" />
+
+                <textarea rows="5" id="mensagemComuniqueArquivo"></textarea>
+                <Br>
+                <a class="button" style="width: 100%;" onclick="enviarEmailComuniqueSe()"> Enviar Comunicado ao Cidadão</a>
+
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
 
 
     <div class="grid-x grid-padding-x">
@@ -68,20 +90,6 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                 <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
 
 
-                    <div class="grid-x grid-padding-x">
-                        <div class="small-12 large-6 cell">
-                            Nome do Arquivo
-                        </div>
-                        <div class="small-12 large-2 cell">
-                            Alterar Arquivo
-                        </div>
-                        <div class="small-12 large-2 cell">
-                            Upload Necessário
-                        </div>
-                        <div class="small-12 large-2 cell">
-                            Visualizar Arquivo
-                        </div>
-                    </div>
 
 
                     <table class="table" style="width: 1000px">
@@ -89,15 +97,16 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                             <tr>
 
 
+                                <th width="15%">Arquivo Carregado</th>
                                 <th width="70%">Nome do Arquivo</th>
                                 <th width="10%">
                                     <center>Visualizar Arquivo</center>
                                 </th>
                                 <th width="10%">
-                                    <center>Validar arquivo</center>
+                                    <center>Solicitar Arquivo</center>
                                 </th>
                                 <th width="10%">
-                                    <center>Excluir Arquivo</center>
+                                    <center>Alterar Arquivo</center>
                                 </th>
 
                             </tr>
@@ -280,10 +289,32 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                 encode: true
 
             }).done(function(data) {
-
                 $('#tabelaArquivos').html(data);
-
                 $('#retorno').foundation('open');
+            });
+        }
+
+''
+
+
+
+        function enviarEmailComuniqueSe() {
+
+            var formData = {
+                solicitacao: $('#idSolicitacao').val(),
+                idTipoDocumento: $('#aquivoPraSolicitar').val(),
+                mensagemComuniqueArquivo: $('#mensagemComuniqueArquivo').val(),
+                comuniqueSeSolicitaArquivo: '1'
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/comuniqueSeController.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+
+            }).done(function(data) {
+                alert('ok');
             });
         }
     </script>
