@@ -228,11 +228,11 @@ include_once 'includes/head.php';
                                 </center>
 
                                 <center>
-                                    <input type="text" value="<?= $_GET['validador'] ?>" id="validador" name="validador" />
+                                    <input type="hidden" value="<?= $_GET['validador'] ?>" id="validador" name="validador" />
                                 </center>
 
                                    <center>
-                                    <input type="text" value="<?= $_GET['idSolicitacao'] ?>" id="idSolicitacao" name="idSolicitacao" />
+                                    <input type="hidden" value="<?= $_GET['idSolicitacao'] ?>" id="idSolicitacao" name="idSolicitacao" />
                                 </center>
 
 
@@ -363,7 +363,7 @@ include_once 'includes/head.php';
                     data: formData,
                     processData: false,
                     contentType: false,
-                    dataType: 'html',
+                    dataType: 'json',
                     success: function(response) {
                         console.log(response);
 
