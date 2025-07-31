@@ -66,8 +66,9 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
             <div class=" large reveal" id="modalComunicaArquivo" data-reveal style="padding: 60px   ;background-color: rgb(231, 228, 220);">
 
                 <h1>Comunicado ao Cidadão</h1>
-                <h4>Solicitar Envio de Arquivo</h4>
-                <input type="text" id="aquivoPraSolicitar" />
+                <h4>Solicitar Arquivo <b><i><span id='nomeDoArquivoEnvio'></span></i></b></h4>
+                <input type="hidden" id="aquivoPraSolicitar" />
+                <input type="text" id="nomeTipoArquivoTxt" />
 
                 <textarea rows="5" id="mensagemComuniqueArquivo"></textarea>
                 <Br>
@@ -302,6 +303,8 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
             var formData = {
                 solicitacao: $('#idSolicitacao').val(),
+                nomeTipoArquivoTxt: $('#nomeTipoArquivoTxt').val(),
+                           
                 idTipoDocumento: $('#aquivoPraSolicitar').val(),
                 mensagemComuniqueArquivo: $('#mensagemComuniqueArquivo').val(),
                 comuniqueSeSolicitaArquivo: '1'
@@ -314,7 +317,8 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
                 encode: true
 
             }).done(function(data) {
-                alert('ok');
+                console.log(data);
+                
             });
         }
     </script>
