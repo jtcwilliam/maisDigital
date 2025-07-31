@@ -25,15 +25,9 @@ if (isset($_POST['listarArquivosAtendente'])) {
 
 
     foreach ($arquivosNecessarios as $key => $value) { ?>
-
-
-
-
         <?php
 
-
         $arquivos = $objArquivo->consultaArquivosParaComuniquese($_POST['solicitacao'], $value['idDocumento']);
-
 
         if (!empty($arquivos)) {
 
@@ -42,7 +36,9 @@ if (isset($_POST['listarArquivosAtendente'])) {
                         <td style="color: green"> <b>' . $arquivos[0]['nomeArquivo'] . '</b></td>
                         <td>  <center><a target="_blank" href="exibirArquivoSolicitacao.php?idArquivo=' . $arquivos[0]['idArquivo'] . '" >   <h4><i style="color: black" class="fi-zoom-in large"></i></h4> </a> </center> </td>
                         <td> <center>-</center>  </td>
-                        <td><center> <a href="#"  onclick="apagarArquivosSolicitacao(' . $arquivos[0]['idArquivo'] . ', \'' . $arquivos[0]['nomeArquivo'] . '\')">  <h4><i class="fi-x large"></i></h4></a></center> </td>
+                        <td><center>    
+                            <a onclick="$(\'#modalComunicaArquivo\').foundation(\'open\');    $(\'#nomeDoArquivoEnvio\').html(\'Substituir Arquivo  ' . $arquivos[0]['nomeArquivo'] . '\'); $(\'#envioTextoComuniqueSe\').val(\'excluirArquivo\');  $(\'#aquivoPraSolicitar\').val(' .   $arquivos[0]['idArquivo']  . ');        " ><h4><i class="fi-x large"></i></h4></a>
+                        </center> </td>
                     
                     
                     
@@ -60,7 +56,7 @@ if (isset($_POST['listarArquivosAtendente'])) {
                                 </td>
                                 <td width="10%">
                                
-                                    <center><a onclick="  $(\'#nomeDoArquivoEnvio\').html(\'' .  $value['descricaoDoc'] . '\');   $(\'#nomeTipoArquivoTxt\').val(\'' .  $value['descricaoDoc'] . '\');    ; $(\'#aquivoPraSolicitar\').val(' .  $value['idDocumento'] . ');  $(\'#modalComunicaArquivo\').foundation(\'open\');">  <h4><i class="fi-megaphone large"></i></h4></a> </center> 
+                                    <center><a onclick="  $(\'#envioTextoComuniqueSe\').val(\'solicitarArquivo\');  $(\'#nomeDoArquivoEnvio\').html(\'Solicitar Arquivo  ' .  $value['descricaoDoc'] . '\');   $(\'#nomeTipoArquivoTxt\').val(\'' .  $value['descricaoDoc'] . '\')   ; $(\'#aquivoPraSolicitar\').val(' .  $value['idDocumento'] . ');  $(\'#modalComunicaArquivo\').foundation(\'open\');">  <h4><i class="fi-megaphone large"></i></h4></a> </center> 
                                 </td>
                                 <td width="10%">
                                     <center> - </center>

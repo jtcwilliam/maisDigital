@@ -224,7 +224,15 @@ include_once 'includes/head.php';
                                 <input class="button" style="background-color: #28536b;" type="file" id="fileInput" name="file" value="" />
 
                                 <center>
-                                    <input type="hidden" value="<?= $_GET['idArquivo'] ?>" id="idArquivo" name="idArquivo" />
+                                    <input type="hidden" value="<?= $_GET['idTipoDocumento'] ?>" id="idArquivo" name="idArquivo" />
+                                </center>
+
+                                <center>
+                                    <input type="text" value="<?= $_GET['validador'] ?>" id="validador" name="validador" />
+                                </center>
+
+                                   <center>
+                                    <input type="text" value="<?= $_GET['idSolicitacao'] ?>" id="idSolicitacao" name="idSolicitacao" />
                                 </center>
 
 
@@ -346,6 +354,8 @@ include_once 'includes/head.php';
 
                 formData.append('carregarArquivoApagadoPeloAtendenteSolicitante', 1);
                 formData.append('idArquivo', $('#idArquivo').val());
+                formData.append('validador', $('#validador').val());
+                formData.append('idSolicitacao', $('#idSolicitacao').val());
 
                 $.ajax({
                     url: 'ajax/arquivosController.php', // Replace with your server endpoint
@@ -353,7 +363,7 @@ include_once 'includes/head.php';
                     data: formData,
                     processData: false,
                     contentType: false,
-                    dataType: 'json',
+                    dataType: 'html',
                     success: function(response) {
                         console.log(response);
 

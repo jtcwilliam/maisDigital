@@ -154,7 +154,7 @@ if (isset($_POST['apagarArquivoAtendente'])) {
 }
 
 
-if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante'])) {
+if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante']) && $_POST['validador'] == 'Alterar' ) {
 
 
     $tipo = $_FILES['file']['type'];
@@ -192,3 +192,75 @@ if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante'])) {
 
     exit();
 }
+
+
+if (isset($_POST['carregarArquivoApagadoPeloAtendenteSolicitante']) && $_POST['validador'] == 'inserirArquivo' ) {
+
+
+$tipo = $_FILES['file']['type'];
+
+ 
+
+ echo 'arquivo aqui';
+
+ 
+
+
+$nomeArquivo = $objDOcumento->trazerDocumentos(' where idDoc ='. $_POST['idArquivo']);
+ 
+
+
+
+ 
+
+
+
+$file = file_get_contents($_FILES['file']['tmp_name']);
+
+$arquivoTipo =  $_FILES['file']['type'];
+
+$idTipoDocumento = $_POST['idArquivo'];
+
+
+$objArquivo->setTipoArquivo($arquivoTipo);
+
+$objArquivo->setNomeArquivo($nomeArquivo[0]['descricaoDoc']);
+
+$objArquivo->setIdSolicitacao($_POST['idSolicitacao']);
+
+$objArquivo->setStatusArquivo('1');
+
+$objArquivo->setArquivo($file);
+
+// codigo do tipo de documento vem 
+$objArquivo->setIdTipoDocumento($idTipoDocumento);
+
+$carregarFinalizaUP = 1;
+if ($objArquivo->inserirArquivos()) {
+
+
+
+    /*
+    $objQtdeArquivo = $objArquivo->consultarQuantidadeArquivo($_POST['idSolicitacao']);
+    $objArquivo = count($objQtdeArquivo);
+
+    $qtdeArquivosServico =  $_POST['idQuantidadeArquivoDoServico'];
+
+    if ($objArquivo == $qtdeArquivosServico) {
+        $carregarFinalizaUP = true;
+    }else{
+        $carregarFinalizaUP = false;
+    }
+
+    echo json_encode(array('retorno' => true, 'carregarBotaoFinaliza' => $carregarFinalizaUP));
+
+  */
+
+    echo json_encode(array('retorno' => true));
+}
+
+exit();
+
+}
+
+ 

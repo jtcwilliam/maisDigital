@@ -66,9 +66,11 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
             <div class=" large reveal" id="modalComunicaArquivo" data-reveal style="padding: 60px   ;background-color: rgb(231, 228, 220);">
 
                 <h1>Comunicado ao Cidadão</h1>
-                <h4>Solicitar Arquivo <b><i><span id='nomeDoArquivoEnvio'></span></i></b></h4>
+                <h4> <b><i><span id='nomeDoArquivoEnvio'></span></i></b></h4>
                 <input type="hidden" id="aquivoPraSolicitar" />
-                <input type="text" id="nomeTipoArquivoTxt" />
+                <input type="hidden" id="nomeTipoArquivoTxt" />
+                <input type="hidden" id="envioTextoComuniqueSe" />
+
 
                 <textarea rows="5" id="mensagemComuniqueArquivo"></textarea>
                 <Br>
@@ -87,7 +89,7 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
 
     <div class="grid-x grid-padding-x">
         <div class="small-12 large-12 cell">
-            <div class="full reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
+            <div class="large reveal" id="retorno" data-reveal style="background-color:ivory" data-close-on-esc="false">
                 <div style="display: grid;  justify-content: center; align-content: center;   padding-top: 0px;">
 
 
@@ -243,6 +245,26 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
             });
         }
 
+        function exbirArquivosDaSolicitacao(solicitacao) {
+
+            var formData = {
+                solicitacao,
+                listarArquivosAtendente: '1'
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/solicitacaoControllerAtendente.php',
+                data: formData,
+                dataType: 'html',
+                encode: true
+
+            }).done(function(data) {
+                $('#tabelaArquivos').html(data);
+                $('#retorno').foundation('open');
+            });
+        }
+
+        ''
 
         function apagarArquivosSolicitacao(idArquivo, nomeArquivo) {
 
@@ -273,52 +295,30 @@ if ($_SESSION['usuarioLogado']['dados'][0]['idTipoPessoa'] != 4) {
             });
         }
 
-
-
-
-        function exbirArquivosDaSolicitacao(solicitacao) {
-
-            var formData = {
-                solicitacao,
-                listarArquivosAtendente: '1'
-            }
-            $.ajax({
-                type: 'POST',
-                url: 'ajax/solicitacaoControllerAtendente.php',
-                data: formData,
-                dataType: 'html',
-                encode: true
-
-            }).done(function(data) {
-                $('#tabelaArquivos').html(data);
-                $('#retorno').foundation('open');
-            });
-        }
-
-''
-
-
-
         function enviarEmailComuniqueSe() {
 
             var formData = {
                 solicitacao: $('#idSolicitacao').val(),
                 nomeTipoArquivoTxt: $('#nomeTipoArquivoTxt').val(),
-                           
-                idTipoDocumento: $('#aquivoPraSolicitar').val(),
+
+                txtEmailParaEnvioArquivo: $('#txtEmailParaEnvioArquivo').val(),
+                codigoId: $('#aquivoPraSolicitar').val(),
                 mensagemComuniqueArquivo: $('#mensagemComuniqueArquivo').val(),
-                comuniqueSeSolicitaArquivo: '1'
+                comunicarSe: $('#envioTextoComuniqueSe').val()
             }
             $.ajax({
                 type: 'POST',
                 url: 'ajax/comuniqueSeController.php',
                 data: formData,
-                dataType: 'html',
+                dataType: 'json',
                 encode: true
 
             }).done(function(data) {
-                console.log(data);
-                
+                if (data.retorno == true) {
+                    alert('Comunique-se enviado ao cidadão');
+                    exbirArquivosDaSolicitacao($('#idSolicitacao').val())
+                }
+
             });
         }
     </script>

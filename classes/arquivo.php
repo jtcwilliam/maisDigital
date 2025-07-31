@@ -108,6 +108,30 @@ class Arquivo
     }
 
 
+    public function  dadosArquivoSolicitante($idArquivo)
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+
+            $stmt = $pdo->prepare(" select  sl.solicitante, ps.nomePessoa ,  nomeArquivo from solicitacao sl inner join pessoas ps on ps.idPessoas = sl.solicitante 
+ INNER join arquivos ar on ar.idSolicitacao  = sl.idsolicitacao where ar.idArquivo =" . $idArquivo);
+
+
+            $stmt->execute();
+
+            $datasDisponiveis = $stmt->fetchAll();
+
+
+            return $datasDisponiveis;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+
+
     public function  gerarArquivo($idArquivo)
     {
         try {
