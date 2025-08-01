@@ -277,7 +277,7 @@ echo '</pre>';
                     <div class="small-12 large-12 cell" style="width: 100%; padding-top: 30px;">
                         <center><a class="button success " onclick=" $('#envioAssinatura').show();  
                          verificarAssinatura($('#idSolicitacaoHidden').val())  ;
-                         qrCodeAssinatura('https:\/\/wmhtecnologia.com.br\/maisDigital\/assinatura.php?idSolicitacao='+$('#idSolicitacaoHidden').val());
+                         qrCodeAssinatura('https:\/\/agendafacil.guarulhos.sp.gov.br\/maisDigital\/assinatura.php?idSolicitacao='+$('#idSolicitacaoHidden').val());
                           $('#documentacao').hide(); $('#fieldSolicitacao').hide();
                            $('#escolha').css('color', 'rgba(8, 124, 4, 0.66)' );
                             $('#complemento').css('color', 'rgba(8, 124, 4, 0.66)' ); 
