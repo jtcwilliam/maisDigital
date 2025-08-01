@@ -13,6 +13,12 @@ class Solicitacao
     private $pwd;
     private $pdoConn;
 
+    private $email;
+    private $telefone;
+    private $nome;
+
+
+
     private $assuntoSolicitacao;
     private $descricaoSolicitacao;
     private $documentoPublico;
@@ -25,6 +31,7 @@ class Solicitacao
     private $solicitacao;
     private $documentoSolicitante;
     private $idAtendente;
+    private $cidade;
 
     private $cepSolicitacao;
     private $logradouroSol;
@@ -237,6 +244,52 @@ class Solicitacao
     }
 
 
+    public function  consultarRequerimento($idRequerimento)
+    {
+        try {
+
+
+            $pdo = $this->getPdoConn();
+
+
+
+            $sql = " select nome,cpfCnpj,telefone,email,cep,logradouro,numero,complemento, assinatura, statusRequerimento,
+             cidade, solicitacao, bairro from requerimentoAutomatico where idrequerimentoAutomatico = " . $idRequerimento;
+
+
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute();
+
+            //$user = $stmt->fetchAll();
+
+            $retorno = array();
+
+            $dados = array();
+
+            $row = $stmt->fetchAll();
+
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
+
+
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
+
+
+
+
+            return $dados;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
     public function  pesquisarAssinatura($idSolicitacao)
     {
         try {
@@ -263,27 +316,27 @@ class Solicitacao
 
 
 
-                $stmt = $pdo->prepare($sql);
+            $stmt = $pdo->prepare($sql);
 
 
-                $stmt->execute();
+            $stmt->execute();
 
-                //$user = $stmt->fetchAll();
+            //$user = $stmt->fetchAll();
 
-                $retorno = array();
+            $retorno = array();
 
-                $dados = array();
+            $dados = array();
 
-                $row = $stmt->fetchAll();
+            $row = $stmt->fetchAll();
 
-                foreach ($row as $key => $value) {
-                    $dados[] = $value;
-                }
+            foreach ($row as $key => $value) {
+                $dados[] = $value;
+            }
 
 
-                if (!isset($dados)) {
-                    $retorno['condicao'] = false;
-                }
+            if (!isset($dados)) {
+                $retorno['condicao'] = false;
+            }
 
 
 
@@ -351,6 +404,135 @@ class Solicitacao
 
 
             if ($stmt->execute()) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+    public function  criarRequerimento()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+            //
+
+
+            $nomeValidador = $this->getNome();
+            $status = 1;
+            $stmt = $pdo->prepare(" INSERT INTO requerimentoAutomatico (statusRequerimento, nome)
+             VALUES (?,?)");
+
+
+
+
+
+
+            $stmt->bindParam(1,  $status, PDO::PARAM_INT);
+            $stmt->bindParam(2,  $nomeValidador, PDO::PARAM_STR);
+
+
+
+
+
+
+
+
+
+
+
+            //            \\
+
+
+
+
+
+            if ($stmt->execute()) {
+
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+
+
+    public function  gravarRequerimento()
+    {
+        try {
+
+            $pdo = $this->getPdoConn();
+            //
+            $stmt = $pdo->prepare(" UPDATE requerimentoAutomatico set 
+            nome=? ,cpfCnpj=? ,telefone=? ,email=? ,cep=? ,logradouro=?  ,numero=?  
+            ,complemento=? , assinatura=? , statusRequerimento=? , cidade=? , solicitacao=? , bairro=?  where nome=?");
+             
+
+
+            $nome = $this->getsolicitante();
+
+            $cpfCnpj = $this->getDocumentoSolicitante();
+
+            $telefone = $this->getTelefone();
+
+            $email = $this->getEmail();
+
+            $cep = $this->getCepSolicitacao();
+
+            $logradouroSol = $this->getLogradouroSol();
+
+            $numero = $this->getNumeroSol();
+
+            $complemento = $this->getNumeroSol();
+
+            $assinatura = $this->getArquivo();
+
+            $statusRequerimento = $this->getStatusSolicitacao();
+
+            $cidade = $this->getCidade();
+
+            $solicitacao = $this->getSolicitacao();
+
+            $bairroMorador = $this->getBairro();
+
+            $nomeRandomico = $this->getsolicitante();
+
+
+            $stmt->bindParam(1,  $nome, PDO::PARAM_LOB);
+            $stmt->bindParam(2,  $cpfCnpj, PDO::PARAM_STR);
+            $stmt->bindParam(3,  $telefone, PDO::PARAM_STR);
+            $stmt->bindParam(4,  $email, PDO::PARAM_STR);
+            $stmt->bindParam(5,  $cep, PDO::PARAM_STR);
+            $stmt->bindParam(6,  $logradouroSol, PDO::PARAM_STR);
+            $stmt->bindParam(7,  $numero, PDO::PARAM_STR);
+            $stmt->bindParam(8,  $complemento, PDO::PARAM_STR);
+            $stmt->bindParam(9,  $assinatura, PDO::PARAM_LOB);
+            $stmt->bindParam(10, $statusRequerimento, PDO::PARAM_INT);
+            $stmt->bindParam(11, $cidade, PDO::PARAM_STR);
+            $stmt->bindParam(12, $solicitacao, PDO::PARAM_STR);
+            $stmt->bindParam(13, $bairroMorador, PDO::PARAM_STR);
+            $stmt->bindParam(14, $nomeRandomico, PDO::PARAM_STR);
+
+
+
+
+
+
+
+
+
+
+            //            \\
+
+
+
+
+
+            if ($stmt->execute()) {
+
                 return true;
             }
         } catch (PDOException $e) {
@@ -857,6 +1039,86 @@ class Solicitacao
     public function setIdAtendente($idAtendente)
     {
         $this->idAtendente = $idAtendente;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of email
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of telefone
+     */
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+
+    /**
+     * Set the value of telefone
+     *
+     * @return  self
+     */
+    public function setTelefone($telefone)
+    {
+        $this->telefone = $telefone;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nome
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    /**
+     * Set the value of nome
+     *
+     * @return  self
+     */
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of cidade
+     */
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+
+    /**
+     * Set the value of cidade
+     *
+     * @return  self
+     */
+    public function setCidade($cidade)
+    {
+        $this->cidade = $cidade;
 
         return $this;
     }
